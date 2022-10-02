@@ -1,0 +1,2146 @@
+<!DOCTYPE html>
+<!-- saved from url=(0050)https://learn.adafruit.com/adafruit-scd30?view=all -->
+<html lang="en-US" prefix="og: http://ogp.me/ns#"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">.turbo-progress-bar {
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: #0076ff;
+  z-index: 9999;
+  transition:
+    width 300ms ease-out,
+    opacity 150ms 150ms ease-in;
+  transform: translate3d(0, 0, 0);
+}
+</style>
+
+<link rel="mask-icon" href="https://learn.adafruit.com/assets/adafruit_favicon-d675616eb86845a7dba9e0f82b02bab9dbc195053d6f2adc8741e42ca351d2fe.svg" color="#000000">
+<link rel="icon" type="image/x-icon" href="https://learn.adafruit.com/assets/favicon-11d9964de07961a3a796b93805a7a240050c6b9f27a213b4002f3ed1efbe2a44.ico">
+<title>Overview | Adafruit SCD-30 - NDIR CO2 Temperature and Humidity Sensor | Adafruit Learning System</title>
+<meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="6ISwPx52aC5JSmhR2KrXUnSz4sNZBlNVN9oDVLHm_Y7SOkdYo_pepy4LcBAnRw4LylhaLhfXBTLyd2ATKd7M9A">
+<link rel="alternate" type="application/atom+xml" title="ATOM" href="https://learn.adafruit.com/feed">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="https://learn.adafruit.com/feed.rss">
+<link rel="stylesheet" href="./Overview _ Adafruit SCD-30 - NDIR CO2 Temperature and Humidity Sensor _ Adafruit Learning System_files/application-ac16e07c9deaf0eb5143ba5f3b111ed2ad703da6b0621d8d8db5ebf02ae83188.css" data-turbo-track="reload" media="screen">
+<link rel="preload" href="https://cdn-shop.adafruit.com/fonts/proximanova/proximanova-light-webfont.woff2" as="font" type="font/woff2" crossorigin="">
+<link rel="preload" href="https://cdn-shop.adafruit.com/fonts/proximanova/proximanova-regular-webfont.woff2" as="font" type="font/woff2" crossorigin="">
+<link rel="preload" href="https://cdn-shop.adafruit.com/fonts/proximanova/proximanova-semibold-webfont.woff2" as="font" type="font/woff2" crossorigin="">
+<script type="text/javascript" src="./Overview _ Adafruit SCD-30 - NDIR CO2 Temperature and Humidity Sensor _ Adafruit Learning System_files/308175db61"></script><script type="text/javascript" async="" src="./Overview _ Adafruit SCD-30 - NDIR CO2 Temperature and Humidity Sensor _ Adafruit Learning System_files/analytics.js"></script><script src="./Overview _ Adafruit SCD-30 - NDIR CO2 Temperature and Humidity Sensor _ Adafruit Learning System_files/nr-1216.min.js"></script><script src="./Overview _ Adafruit SCD-30 - NDIR CO2 Temperature and Humidity Sensor _ Adafruit Learning System_files/js"></script>
+<meta name="viewport" content="initial-scale=1, viewport-fit=cover">
+
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"308175db61","applicationID":"54271218","transactionName":"cVZXRUFeWghRShtEVlVcSh5AWVkT","queueTime":1,"applicationTime":339,"agent":""}</script>
+<script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"308175db61",applicationID:"54271218"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(9),c=t(10),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(11);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(u&&u<r.startTime)return;var i=[r],o=a({});o&&i.push(o),l("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function c(t){if(t instanceof y&&!w){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=v.now()?n.fid=v.now()-e:e>v.offset&&e<=Date.now()?(e-=v.offset,n.fid=v.now()-e):e=v.now(),w=!0,l("timing",["fi",e,n])}}function f(t){"hidden"===t&&(u=v.now(),l("pageHide",[u]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var u,s,d,p,l=t("handle"),v=t("loader"),m=t(8),g=t(3),y=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(h){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}p=new PerformanceObserver(o);try{p.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var w=!1,b=["click","keydown","mousedown","pointerdown","touchstart"];b.forEach(function(t){document.addEventListener(t,c,g(!1))})}m(f)}},{}],7:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],8:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],9:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],10:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],11:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){h[t]=m(t).concat(e)}function v(t,e){var n=h[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return h[t]||[]}function g(t){return p[t]=p[t]||i(n)}function y(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var h={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:y,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(9),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!M++){var t=T.info=NREUM.info,e=m.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(x,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+T.offset],null,"api"),c("timing",["load",n]);var r=m.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===m.readyState&&o()}function o(){c("mark",["domContent",a()+T.offset],null,"api")}var a=t(5),c=t("handle"),f=t(9),u=t("ee"),s=t(7),d=t(2),p=t(3),l=d.getConfiguration("ssl")===!1?"http":"https",v=window,m=v.document,g="addEventListener",y="attachEvent",h=v.XMLHttpRequest,w=h&&h.prototype,b=!1;NREUM.o={ST:setTimeout,SI:v.setImmediate,CT:clearTimeout,XHR:h,REQ:v.Request,EV:v.Event,PR:v.Promise,MO:v.MutationObserver};var E=""+location,x={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1216.min.js"},O=h&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),T=e.exports={offset:a.getLastTimestamp(),now:a,origin:E,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(6),m[g]?(m[g]("DOMContentLoaded",o,p(!1)),v[g]("load",r,p(!1))):(m[y]("onreadystatechange",i),v[y]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var M=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(10),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
+<meta name="guide-title" content="Adafruit SCD-30 - NDIR CO2 Temperature and Humidity Sensor">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@adafruit">
+<meta name="twitter:title" content="Adafruit SCD-30 - NDIR CO2 Temperature and Humidity Sensor">
+<meta name="twitter:description" content="Perfect for environmental sensing, scientific experiments, air quality and ventilation studies and more.">
+<meta name="twitter:image:src" content="https://cdn-learn.adafruit.com/guides/images/000/003/229/medium800/4867_iso_ORIG_2021_01.jpg">
+<meta name="twitter:domain" content="https://learn.adafruit.com">
+<meta property="og:title" content="Adafruit SCD-30 - NDIR CO2 Temperature and Humidity Sensor">
+<meta property="og:description" content="The SCD-30 is an NDIR sensor, which is a &#39;true&#39; CO2 sensor, that will tell you the CO2 PPM (parts-per-million) composition of ambient air. Unlike the SGP30, this sensor isn&#39;t approximating it from VOC gas concentration - it really is measuring the CO2 concentration! That means its a lot bigger and more expensive, but it is the real thing. Perfect for environmental sensing, scientific experiments, air quality and ventilation studies and more.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://cdn-learn.adafruit.com/guides/images/000/003/229/medium800/4867_iso_ORIG_2021_01.jpg">
+<meta property="og:url" content="https://learn.adafruit.com/adafruit-scd30/overview">
+<meta property="og:site_name" content="Adafruit Learning System">
+<script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "WebSite",
+        "url": "https://learn.adafruit.com/adafruit-scd30/overview",
+        "name": "Adafruit SCD-30 - NDIR CO2 Temperature and Humidity Sensor",
+        "description": "The SCD-30 is an NDIR sensor, which is a &#39;true&#39; CO2 sensor, that will tell you the CO2 PPM (parts-per-million) composition of ambient air. Unlike the SGP30, this sensor isn&#39;t approximating it from VOC gas concentration - it really is measuring the CO2 concentration! That means its a lot bigger and more expensive, but it is the real thing. Perfect for environmental sensing, scientific experiments, air quality and ventilation studies and more.",
+        "publisher": "Adafruit",
+        "datePublished": "2021-01-06T14:12:31-05:00",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://learn.adafruit.com/search?q={search_term}",
+          "query-input": "required name=search_term"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Kattni Rembor"
+        }
+      }
+    </script>
+<!--[if lte IE 9]>
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+  <![endif]-->
+<script>
+    window.rails_env = 'production';
+  </script>
+<script src="./Overview _ Adafruit SCD-30 - NDIR CO2 Temperature and Humidity Sensor _ Adafruit Learning System_files/runtime-2d699564bd6320776cd6.js" data-turbo-track="reload" defer="defer"></script>
+<script src="./Overview _ Adafruit SCD-30 - NDIR CO2 Temperature and Humidity Sensor _ Adafruit Learning System_files/409-d37b99cdacd44ad6c764.js" data-turbo-track="reload" defer="defer"></script>
+<script src="./Overview _ Adafruit SCD-30 - NDIR CO2 Temperature and Humidity Sensor _ Adafruit Learning System_files/411-2aef06340b4b5ef82cb5.js" data-turbo-track="reload" defer="defer"></script>
+<script src="./Overview _ Adafruit SCD-30 - NDIR CO2 Temperature and Humidity Sensor _ Adafruit Learning System_files/301-15893a847d560f8f134c.js" data-turbo-track="reload" defer="defer"></script>
+<script src="./Overview _ Adafruit SCD-30 - NDIR CO2 Temperature and Humidity Sensor _ Adafruit Learning System_files/730-6e994dd269068f22821a.js" data-turbo-track="reload" defer="defer"></script>
+<script src="./Overview _ Adafruit SCD-30 - NDIR CO2 Temperature and Humidity Sensor _ Adafruit Learning System_files/934-834d5103f6afbdd5b1c8.js" data-turbo-track="reload" defer="defer"></script>
+<script src="./Overview _ Adafruit SCD-30 - NDIR CO2 Temperature and Humidity Sensor _ Adafruit Learning System_files/908-4b0b54d9b40212246d57.js" data-turbo-track="reload" defer="defer"></script>
+<script src="./Overview _ Adafruit SCD-30 - NDIR CO2 Temperature and Humidity Sensor _ Adafruit Learning System_files/application-a6543fc5ae9be4d0980a.js" data-turbo-track="reload" defer="defer"></script>
+<script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "WebSite",
+      "url": "https://learn.adafruit.com/",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://learn.adafruit.com/search?q={search_term}",
+        "query-input": "required name=search_term"
+      }
+    }
+  </script>
+<style id="fit-vids-style">.fluid-width-video-wrapper{width:100%;position:relative;padding:0;}.fluid-width-video-wrapper iframe,.fluid-width-video-wrapper object,.fluid-width-video-wrapper embed {position:absolute;top:0;left:0;width:100%;height:100%;}</style></head>
+<body class="application pages show production" data-new-gr-c-s-check-loaded="14.1080.0" data-gr-ext-installed="">
+<div id="outer-wrapper">
+<div id="inner-wrapper">
+<div id="messaging-wrapper" class="messages-container" data-load="https://www.adafruit.com/api/multi_message.php"></div>
+<a data-turbo="false" class="skip-to-main" href="https://learn.adafruit.com/adafruit-scd30?view=all#main-content-container">Skip to main content</a>
+<header id="adafruit-header" aria-label="Adafruit header">
+<div id="small-header">
+<div class="first-row">
+<nav aria-label="Adafruit applications menu">
+<ul class="application-links">
+<li><a aria-label="Adafruit Shop" href="https://www.adafruit.com/">Shop</a></li>
+<li class="selected"><a aria-label="Adafruit Learning System" href="https://learn.adafruit.com/">Learn</a></li>
+<li><a aria-label="Adafruit Blog" href="https://blog.adafruit.com/">Blog</a></li>
+<li><a aria-label="Adafruit Forums and Support" href="https://forums.adafruit.com/">Forums</a></li>
+<li><a aria-label="Adafruit Youtube Videos" href="https://www.youtube.com/adafruit/live">LIVE!</a></li>
+<li><a aria-label="Adafruit product box subscription" href="https://www.adabox.com/">AdaBox</a></li>
+<li><a aria-label="Adafruit IO, the internet of things" href="https://io.adafruit.com/">IO</a></li>
+</ul>
+</nav>
+</div>
+<div class="second-row">
+<div class="row-content">
+<div id="mobile-header-logo">
+<a href="https://learn.adafruit.com/">
+<img id="small-logo" height="50" width="50" alt="Happy Halloween!" src="./Overview _ Adafruit SCD-30 - NDIR CO2 Temperature and Humidity Sensor _ Adafruit Learning System_files/adafruit_logo_small.png">
+</a> </div>
+<button id="mobile-menu-button" class="c-hamburger c-hamburger--htx">
+<span>toggle menu</span>
+</button>
+<div id="mobile-search-wrapper">
+<form action="https://learn.adafruit.com/search" method="get">
+<label for="mobile-search" style="display:none;">Search</label>
+<input id="mobile-search" type="text" name="q" autocomplete="off" data-app-id="W9DMM4OTH0" data-app-key="e613bcda3453b9ef887e2724362f9e57" data-app-index="learn_guides_production" data-app-uri="https://learn.adafruit.com">
+<button type="submit" aria-label="Submit search"><i class="fa fa-search"></i></button>
+</form>
+</div>
+<a id="mobile-header-cart" href="https://www.adafruit.com/shopping_cart">
+<span class="small-cart-count" aria-live="polite">0</span>
+<i class="fa fa-shopping-cart"></i>
+</a>
+</div>
+</div>
+<nav id="small-header-nav">
+<div id="small-menu">
+<ul>
+<li class="account-info">
+<a href="https://learn.adafruit.com/users/sign_in">Sign In</a> | <a href="https://accounts.adafruit.com/">Create Account</a>
+</li>
+<li><a href="https://learn.adafruit.com/guides/latest">New Guides</a></li>
+<li><a href="https://learn.adafruit.com/groups">Series</a></li>
+<li><a href="https://www.adafruit.com/wishlists">Wishlists</a></li>
+<li>
+<a class="random-guide-link" aria-label="View a Random Guide" href="https://learn.adafruit.com/guides/random">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+<g>
+<g>
+<path fill="currentColor" d="M478.578,244.475H278.047c-3.81,0-7.42,0.78-10.829,1.961l56.305-56.305c6.306-6.306,9.759-14.706,9.759-23.64
+      c0-8.935-3.454-17.335-9.759-23.64L190.282,9.609c-12.589-12.611-34.692-12.611-47.281,0L9.759,142.85
+      C3.454,149.156,0,157.556,0,166.491s3.454,17.335,9.759,23.64l133.242,133.242c6.306,6.306,14.683,9.759,23.64,9.759
+      c8.957,0,17.335-3.454,23.64-9.759l56.305-56.305c-1.181,3.409-1.961,7.019-1.961,10.829v200.531
+      c0,18.427,14.995,33.422,33.422,33.422h200.531c18.427,0,33.422-14.995,33.422-33.422V277.897
+      C512,259.47,497.005,244.475,478.578,244.475z M182.394,271.368c-4.345,4.345-10.049,6.506-15.753,6.506
+      s-11.408-2.161-15.753-6.506c-8.712-8.69-8.712-22.816,0-31.506c8.69-8.712,22.816-8.712,31.506,0
+      C191.106,248.552,191.106,262.679,182.394,271.368z M182.394,182.244c-4.345,4.345-10.049,6.506-15.753,6.506
+      c-5.704,0-11.408-2.161-15.753-6.506c-8.712-8.69-8.712-22.816,0-31.506c8.69-8.712,22.816-8.712,31.506,0
+      C191.106,159.428,191.106,173.554,182.394,182.244z M182.394,93.119c-4.345,4.345-10.049,6.506-15.753,6.506
+      c-5.704,0-11.408-2.161-15.753-6.506c-8.712-8.69-8.712-22.816,0-31.506c8.69-8.712,22.816-8.712,31.506,0
+      C191.106,70.303,191.106,84.429,182.394,93.119z M311.469,467.287c-12.277,0-22.281-9.982-22.281-22.281
+      c0-12.299,10.004-22.281,22.281-22.281c12.277,0,22.281,9.982,22.281,22.281C333.75,457.305,323.746,467.287,311.469,467.287z
+       M311.469,333.6c-12.277,0-22.281-9.982-22.281-22.281c0-12.299,10.004-22.281,22.281-22.281c12.277,0,22.281,9.982,22.281,22.281
+      C333.75,323.618,323.746,333.6,311.469,333.6z M378.313,400.444c-12.277,0-22.281-9.982-22.281-22.281
+      c0-12.299,10.004-22.281,22.281-22.281s22.281,9.982,22.281,22.281C400.594,390.462,390.59,400.444,378.313,400.444z
+       M445.156,467.287c-12.277,0-22.281-9.982-22.281-22.281c0-12.299,10.004-22.281,22.281-22.281s22.281,9.982,22.281,22.281
+      C467.438,457.305,457.433,467.287,445.156,467.287z M445.156,333.6c-12.277,0-22.281-9.982-22.281-22.281
+      c0-12.299,10.004-22.281,22.281-22.281s22.281,9.982,22.281,22.281C467.438,323.618,457.433,333.6,445.156,333.6z"></path>
+</g>
+</g>
+</svg>
+</a>
+</li>
+</ul>
+</div>
+<div id="mobile-search-results"></div>
+</nav>
+</div>
+<div id="large-header">
+<nav class="first-row" aria-label="Adafruit main site">
+<div class="row-content">
+<nav aria-label="Adafruit applications menu">
+<ul class="application-links">
+<li><a aria-label="Adafruit Shop" href="https://www.adafruit.com/">Shop</a></li>
+<li class="selected"><a aria-label="Adafruit Learning System" href="https://learn.adafruit.com/">Learn</a></li>
+<li><a aria-label="Adafruit Blog" href="https://blog.adafruit.com/">Blog</a></li>
+<li><a aria-label="Adafruit Forums and Support" href="https://forums.adafruit.com/">Forums</a></li>
+<li><a aria-label="Adafruit Youtube Videos" href="https://www.youtube.com/adafruit/live">LIVE!</a></li>
+<li><a aria-label="Adafruit product box subscription" href="https://www.adabox.com/">AdaBox</a></li>
+<li><a aria-label="Adafruit IO, the internet of things" href="https://io.adafruit.com/">IO</a></li>
+</ul>
+</nav>
+<div id="account">
+<span class="sign-out"><a href="https://learn.adafruit.com/users/sign_in">Sign In</a></span>
+<div class="cart">
+<a aria-label="Shopping Cart, 0 items" aria-live="polite" href="https://www.adafruit.com/shopping_cart">
+<i class="fa fa-shopping-cart"></i> 0
+</a> </div>
+</div>
+</div>
+</nav>
+<nav class="second-row" aria-label="Adafruit Learn application">
+<div class="row-content">
+<div class="left-content">
+<div id="logo">
+<a title="Adafruit Learning System" href="https://learn.adafruit.com/">
+<img alt="Happy Halloween!" src="./Overview _ Adafruit SCD-30 - NDIR CO2 Temperature and Humidity Sensor _ Adafruit Learning System_files/logo_2x.png">
+</a> </div>
+<ul class="main-nav-links">
+<li class="dropdown with-overlay nav-link">
+<button class="dropdown-label" aria-haspopup="true">Explore &amp; Learn</button>
+<div class="dropdown-container">
+<div class="dropdown-content" tabindex="-1">
+<div class="flyout">
+<div class="three-panels">
+<div class="first-column">
+<div class="content-header">
+<span class="title">Learn Categories</span><a class="view-all-count" href="https://learn.adafruit.com/search">view all</a>
+</div>
+<div class="categories">
+<ul>
+<li><a href="https://learn.adafruit.com/category/3d-printing">3D Printing</a></li>
+<li><a href="https://learn.adafruit.com/category/adabox">AdaBox</a></li>
+<li><a href="https://learn.adafruit.com/category/adafruit-products">Adafruit Products</a></li>
+<li><a href="https://learn.adafruit.com/category/arduino">Arduino Compatibles</a></li>
+<li><a href="https://learn.adafruit.com/category/breakout-boards">Breakout Boards</a></li>
+<li><a href="https://learn.adafruit.com/category/circuit-playground">Circuit Playground</a></li>
+<li><a href="https://learn.adafruit.com/category/circuitpython">CircuitPython</a></li>
+<li><a href="https://learn.adafruit.com/category/clue">CLUE</a></li>
+<li><a href="https://learn.adafruit.com/category/community-support">Community Support</a></li>
+<li><a href="https://learn.adafruit.com/category/components">Components</a></li>
+<li><a href="https://learn.adafruit.com/category/crickit">Crickit</a></li>
+<li><a href="https://learn.adafruit.com/category/customer-projects">Customer &amp; Partner Projects</a></li>
+<li><a href="https://learn.adafruit.com/category/development-boards">Development Boards</a></li>
+<li><a href="https://learn.adafruit.com/category/educators">Educators</a></li>
+<li><a href="https://learn.adafruit.com/category/el">EL Wire/Tape/Panel</a></li>
+<li><a href="https://learn.adafruit.com/category/feather">Feather</a></li>
+<li><a href="https://learn.adafruit.com/category/gaming-1">Gaming</a></li>
+<li><a href="https://learn.adafruit.com/category/hacks">Hacks</a></li>
+</ul>
+<ul>
+<li><a href="https://learn.adafruit.com/category/internet-of-things-iot">Internet of Things - IOT</a></li>
+<li><a href="https://learn.adafruit.com/category/lcds-and-displays">LCDs &amp; Displays</a></li>
+<li><a href="https://learn.adafruit.com/category/leds">LEDs</a></li>
+<li><a href="https://learn.adafruit.com/category/machine-learning">Machine Learning</a></li>
+<li><a href="https://learn.adafruit.com/category/makecode">MakeCode</a></li>
+<li><a href="https://learn.adafruit.com/category/maker-business">Maker Business</a></li>
+<li><a href="https://learn.adafruit.com/category/micro-bit">micro:bit</a></li>
+<li><a href="https://learn.adafruit.com/category/microcontrollers">Microcontrollers</a></li>
+<li><a href="https://learn.adafruit.com/category/programming">Programming</a></li>
+<li><a href="https://learn.adafruit.com/category/projects">Projects</a></li>
+<li><a href="https://learn.adafruit.com/category/raspberry-pi">Raspberry Pi</a></li>
+<li><a href="https://learn.adafruit.com/category/robotics">Robotics &amp; CNC</a></li>
+<li><a href="https://learn.adafruit.com/category/sensors">Sensors</a></li>
+<li><a href="https://learn.adafruit.com/category/stemma">STEMMA</a></li>
+<li><a href="https://learn.adafruit.com/category/tools">Tools</a></li>
+<li><a href="https://learn.adafruit.com/category/trellis">Trellis</a></li>
+<li><a href="https://learn.adafruit.com/category/wearables">Wearables</a></li>
+</ul>
+</div>
+</div>
+<div class="middle-column">
+<div class="content-header">
+<span class="title">Groups</span><a class="view-all-count" href="https://learn.adafruit.com/groups">view all</a>
+</div>
+<ul class="links">
+<li>
+<a href="https://learn.adafruit.com/groups/circuit-playground">Circuit Playground</a>
+</li>
+<li>
+<a href="https://learn.adafruit.com/groups/adafruit-io-basics">Adafruit IO Basics</a>
+</li>
+<li>
+<a href="https://learn.adafruit.com/groups/collins-lab">Collin's Lab</a>
+</li>
+</ul>
+</div>
+<div class="last-column hide-md">
+<section class="image-content-card">
+<img class="lazy" aria-hiddem="true" alt="STEMMA, Plug-n-play components" src="./Overview _ Adafruit SCD-30 - NDIR CO2 Temperature and Humidity Sensor _ Adafruit Learning System_files/stemma-024f9c0c2063cd6b4b7c67cced3bf21dace7ab71444fd492a3faa0c15084c4bc.jpg" style="">
+<div class="text">
+<div class="main">
+<span>STEMMA</span>
+</div>
+<div class="tagline">
+<span>Plug-n-play components</span>
+</div>
+</div>
+<div class="button">
+<a title="Plug-n-play components, STEMMA" href="https://learn.adafruit.com/category/stemma">Get connected</a>
+</div>
+</section>
+</div>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li class="nav-link">
+<a class="new-guides-link" href="https://learn.adafruit.com/guides/latest">New Guides</a>
+</li>
+<li class="nav-link">
+<a class="random-guide-link" aria-label="View a Random Guide" href="https://learn.adafruit.com/guides/random">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+<g>
+<g>
+<path fill="currentColor" d="M478.578,244.475H278.047c-3.81,0-7.42,0.78-10.829,1.961l56.305-56.305c6.306-6.306,9.759-14.706,9.759-23.64
+      c0-8.935-3.454-17.335-9.759-23.64L190.282,9.609c-12.589-12.611-34.692-12.611-47.281,0L9.759,142.85
+      C3.454,149.156,0,157.556,0,166.491s3.454,17.335,9.759,23.64l133.242,133.242c6.306,6.306,14.683,9.759,23.64,9.759
+      c8.957,0,17.335-3.454,23.64-9.759l56.305-56.305c-1.181,3.409-1.961,7.019-1.961,10.829v200.531
+      c0,18.427,14.995,33.422,33.422,33.422h200.531c18.427,0,33.422-14.995,33.422-33.422V277.897
+      C512,259.47,497.005,244.475,478.578,244.475z M182.394,271.368c-4.345,4.345-10.049,6.506-15.753,6.506
+      s-11.408-2.161-15.753-6.506c-8.712-8.69-8.712-22.816,0-31.506c8.69-8.712,22.816-8.712,31.506,0
+      C191.106,248.552,191.106,262.679,182.394,271.368z M182.394,182.244c-4.345,4.345-10.049,6.506-15.753,6.506
+      c-5.704,0-11.408-2.161-15.753-6.506c-8.712-8.69-8.712-22.816,0-31.506c8.69-8.712,22.816-8.712,31.506,0
+      C191.106,159.428,191.106,173.554,182.394,182.244z M182.394,93.119c-4.345,4.345-10.049,6.506-15.753,6.506
+      c-5.704,0-11.408-2.161-15.753-6.506c-8.712-8.69-8.712-22.816,0-31.506c8.69-8.712,22.816-8.712,31.506,0
+      C191.106,70.303,191.106,84.429,182.394,93.119z M311.469,467.287c-12.277,0-22.281-9.982-22.281-22.281
+      c0-12.299,10.004-22.281,22.281-22.281c12.277,0,22.281,9.982,22.281,22.281C333.75,457.305,323.746,467.287,311.469,467.287z
+       M311.469,333.6c-12.277,0-22.281-9.982-22.281-22.281c0-12.299,10.004-22.281,22.281-22.281c12.277,0,22.281,9.982,22.281,22.281
+      C333.75,323.618,323.746,333.6,311.469,333.6z M378.313,400.444c-12.277,0-22.281-9.982-22.281-22.281
+      c0-12.299,10.004-22.281,22.281-22.281s22.281,9.982,22.281,22.281C400.594,390.462,390.59,400.444,378.313,400.444z
+       M445.156,467.287c-12.277,0-22.281-9.982-22.281-22.281c0-12.299,10.004-22.281,22.281-22.281s22.281,9.982,22.281,22.281
+      C467.438,457.305,457.433,467.287,445.156,467.287z M445.156,333.6c-12.277,0-22.281-9.982-22.281-22.281
+      c0-12.299,10.004-22.281,22.281-22.281s22.281,9.982,22.281,22.281C467.438,323.618,457.433,333.6,445.156,333.6z"></path>
+</g>
+</g>
+</svg>
+</a>
+</li>
+</ul>
+</div>
+<div class="right-content">
+<div class="search-wrapper">
+<div id="search-info" data-page="" data-app-id="W9DMM4OTH0" data-app-key="e613bcda3453b9ef887e2724362f9e57" data-app-index="learn_guides_production" data-app-uri="https://learn.adafruit.com"></div>
+<div id="search"><div class="ais-SearchBox"><form action="https://learn.adafruit.com/adafruit-scd30?view=all" role="search" class="ais-SearchBox-form" novalidate=""><input class="ais-SearchBox-input" type="search" placeholder="" autocomplete="off" autocorrect="off" autocapitalize="off" maxlength="512"><button class="ais-SearchBox-submit" type="submit" title="Submit the search query." hidden=""><svg class="ais-SearchBox-submitIcon" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 40 40"> <path d="M26.804 29.01c-2.832 2.34-6.465 3.746-10.426 3.746C7.333 32.756 0 25.424 0 16.378 0 7.333 7.333 0 16.378 0c9.046 0 16.378 7.333 16.378 16.378 0 3.96-1.406 7.594-3.746 10.426l10.534 10.534c.607.607.61 1.59-.004 2.202-.61.61-1.597.61-2.202.004L26.804 29.01zm-10.426.627c7.323 0 13.26-5.936 13.26-13.26 0-7.32-5.937-13.257-13.26-13.257C9.056 3.12 3.12 9.056 3.12 16.378c0 7.323 5.936 13.26 13.258 13.26z"></path> </svg></button><button class="ais-SearchBox-reset" type="reset" title="Clear the search query." hidden=""><svg class="ais-SearchBox-resetIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="10" height="10"> <path d="M8.114 10L.944 2.83 0 1.885 1.886 0l.943.943L10 8.113l7.17-7.17.944-.943L20 1.886l-.943.943-7.17 7.17 7.17 7.17.943.944L18.114 20l-.943-.943-7.17-7.17-7.17 7.17-.944.943L0 18.114l.943-.943L8.113 10z"></path> </svg></button><span class="ais-SearchBox-loadingIndicator" hidden=""><svg class="ais-SearchBox-loadingIcon" width="16" height="16" viewBox="0 0 38 38" xmlns="http://www.w3.org/2000/svg" stroke="#444"> <g fill="none" fillrule="evenodd"> <g transform="translate(1 1)" strokewidth="2"> <circle strokeopacity=".5" cx="18" cy="18" r="18"></circle> <path d="M36 18c0-9.94-8.06-18-18-18"> <animatetransform attributeName="transform" type="rotate" from="0 18 18" to="360 18 18" dur="1s" repeatCount="indefinite"></animatetransform> </path> </g> </g> </svg></span></form></div></div>
+<i class="fa fa-search"></i>
+</div>
+</div>
+</div>
+</nav>
+</div>
+</header>
+<main id="main-content">
+<div id="main-content-container" tabindex="-1">
+<div class="nav-bar ">
+<div class="content">
+<div class="left-content">
+<div class="breadcrumbs" aria-label="Breadcrumbs">
+<a href="https://learn.adafruit.com/"><i class="fa fa-home" role="img" title="Learn home"></i></a>
+<i class="fa fa-chevron-right separator"></i>
+Adafruit SCD-30 - NDIR CO2 Temperature and Humidity Sensor
+</div>
+</div>
+<div class="right-content">
+</div>
+</div>
+</div>
+<div id="page-wrapper" class="single-page">
+<article id="content-wrapper" lang="en" class="double-sidebar-layout" data-page-id="21348" data-guide-id="3229">
+<aside class="sidebar-left-wrapper">
+<div class="sidebar-left-content" data-clampedwidth=".sidebar-left-wrapper">
+<div class="sidebar-left">
+<header aria-label="Guide information" class="title-bar">
+<div class="image-container">
+<img aria-hidden="true" alt="Adafruit SCD-30 - NDIR CO2 Temperature and Humidity Sensor" class="image-preview lazy" src="./Overview _ Adafruit SCD-30 - NDIR CO2 Temperature and Humidity Sensor _ Adafruit Learning System_files/4867_iso_ORIG_2021_01.jpg" style="">
+</div>
+<h1>Adafruit SCD-30 - NDIR CO2 Temperature and Humidity Sensor</h1>
+<div class="author">
+By
+<a aria-label="Guide author" data-turbo="false" href="https://learn.adafruit.com/u/kattni">
+<span class="name">Kattni Rembor</span>
+</a> </div>
+ <div class="page-tagline" aria-label="Guide tagline">Perfect for environmental sensing, scientific experiments, air quality and ventilation studies and more.</div>
+</header>
+<nav aria-label="Guide navigation">
+<ul class="page-parent" aria-label="Guide pages">
+<li class="parent active">
+<a href="https://learn.adafruit.com/adafruit-scd30?view=all#overview" class="published">Overview</a>
+</li>
+<li class="parent ">
+<a href="https://learn.adafruit.com/adafruit-scd30?view=all#pinouts" class="published">Pinouts</a>
+</li>
+<li class="parent ">
+<a data-toggle="collapse" aria-label="Toggle child pages" aria-controls="page-21352-children" class="collapsed-icon collapsed" href="https://learn.adafruit.com/adafruit-scd30?view=all#page-21352-children" aria-expanded="false"></a>
+<a href="https://learn.adafruit.com/adafruit-scd30?view=all#arduino" class="published">Arduino</a>
+<ul id="page-21352-children" class="collapse  page-child nav" aria-expanded="false">
+<li class="published ">
+<a href="https://adafruit.github.io/Adafruit_SCD30/html/index.html" target="blank" class="published">Arduino Docs <i class="fa fa-external-link"></i></a>
+</li>
+</ul></li>
+<li class="parent ">
+<a data-toggle="collapse" aria-label="Toggle child pages" aria-controls="page-21351-children" class="collapsed-icon collapsed" href="https://learn.adafruit.com/adafruit-scd30?view=all#page-21351-children" aria-expanded="false"></a>
+<a href="https://learn.adafruit.com/adafruit-scd30?view=all#python-circuitpython" class="published">Python &amp; CircuitPython</a>
+<ul id="page-21351-children" class="collapse  page-child nav" aria-expanded="false">
+<li class="published ">
+<a href="https://circuitpython.readthedocs.io/projects/scd30/en/latest/" target="blank" class="published">Python Docs <i class="fa fa-external-link"></i></a>
+</li>
+</ul></li>
+<li class="parent ">
+<a href="https://learn.adafruit.com/adafruit-scd30?view=all#wippersnapper" class="published">WipperSnapper</a>
+</li>
+<li class="parent ">
+<a href="https://learn.adafruit.com/adafruit-scd30?view=all#field-calibration" class="published">Field Calibration</a>
+</li>
+<li class="parent ">
+<a href="https://learn.adafruit.com/adafruit-scd30?view=all#downloads" class="published">Downloads</a>
+</li>
+</ul>
+<div class="single-page-spacer"></div>
+<ul class="page-parent" aria-label="Guide resources">
+<li class="single-page-link ">
+<a href="https://learn.adafruit.com/adafruit-scd30/featured_products">Featured Products</a>
+</li>
+<li>
+<a href="https://learn.adafruit.com/adafruit-scd30">Multiple pages</a>
+</li>
+<li><a href="https://cdn-learn.adafruit.com/downloads/pdf/adafruit-scd30.pdf">Download PDF</a></li>
+</ul>
+</nav>
+<a class="feedback-link" title="Feedback? Corrections?" rel="nofollow" data-remote="true" data-method="get" href="https://learn.adafruit.com/feedback/new?page_id=21348">
+Feedback? Corrections?
+</a>
+</div>
+</div>
+</aside>
+<section class="main-content" role="region" aria-label="Page content">
+<div class="page-header-wrapper">
+<h2 class="headline" aria-label="Page title">
+<span id="overview">Overview</span>
+</h2>
+<div class="badges">
+<span id="guide-favorite">
+<a class="badge category right red" aria-label="Select to Save this guide." data-remote="true" rel="nofollow" data-method="post" href="https://learn.adafruit.com/guides/3229/favorites.js">
+<i class="fa fa-bookmark-o"></i> Save
+</a></span>
+<span id="subscribe-badge">
+<a data-toggle="modal" data-target="#guide-subscription-modal" class="badge right" aria-label="Select to subscribe to this guide." href="https://learn.adafruit.com/adafruit-scd30?view=all">
+<i class="fa fa-bell-o"></i> Subscribe
+</a></span>
+<div id="guide-subscription-modal" class="modal fade">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+<h4 class="modal-title">New Subscription</h4>
+</div>
+<div class="modal-body">
+<p>Please <a href="https://accounts.adafruit.com/users/sign_in">sign in</a> to subscribe to this guide.</p>
+<p>You will be redirected back to this guide once you <a href="https://accounts.adafruit.com/users/sign_in">sign in</a>, and can then subscribe to this guide.</p>
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="page-content">
+<div class="" role="region" aria-label="Page content">
+<div class="row-fluid text-element">
+<p>Take a deep breath in...now slowly breathe out. Mmm isn't it wonderful? All that air around us, which we bring into our lungs, extract oxygen from and then breathe out carbon dioxide. CO2 is essential for life on this planet we call Earth - us and plants take turns using and emitting CO2 in an elegant symbiosis. But it's important to keep that CO2 balanced - you don't want too much around, not good for humans and not good for our planet.</p>
+</div>
+<div class="row-fluid image-element" aria-label="Image: adafruit_products_4867-00.jpg">
+<a href="https://learn.adafruit.com/assets/98500">
+<img class="98500-asset img-responsive" srcset="https://cdn-learn.adafruit.com/assets/assets/000/098/500/medium260/adafruit_products_4867-00.jpg?1609958879 260w,
+               https://cdn-learn.adafruit.com/assets/assets/000/098/500/medium640/adafruit_products_4867-00.jpg?1609958879 640w,
+               https://cdn-learn.adafruit.com/assets/assets/000/098/500/medium800/adafruit_products_4867-00.jpg?1609958879 800w,
+               https://cdn-learn.adafruit.com/assets/assets/000/098/500/large1024/adafruit_products_4867-00.jpg?1609958879 1024w" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 65vw, (max-width: 1365px) 47vw, 750px" src="./Overview _ Adafruit SCD-30 - NDIR CO2 Temperature and Humidity Sensor _ Adafruit Learning System_files/adafruit_products_4867-00.jpg" alt="adafruit_products_4867-00.jpg">
+<span class="image-expand"><i class="fa fa-search-plus"></i></span>
+</a> </div>
+<div class="row-fluid text-element">
+<p>The SCD-30 is <a href="https://en.wikipedia.org/wiki/Nondispersive_infrared_sensor">an NDIR sensor</a>, which is a 'true' CO2 sensor, that will tell you the CO2 PPM (parts-per-million) composition of ambient air. <a href="https://www.adafruit.com/product/3709">Unlike the SGP30, this sensor isn't approximating it from VOC gas concentration</a> -<strong> it really is measuring the CO2 concentration</strong>! That means its a lot bigger and more expensive, but it is the real thing. Perfect for environmental sensing, scientific experiments, air quality and ventilation studies and more.</p>
+</div>
+<div class="row-fluid image-element" aria-label="Image: adafruit_products_4867_top_v2_ORIG_2021_01.jpg">
+<a href="https://learn.adafruit.com/assets/98499">
+<img class="98499-asset img-responsive" srcset="https://cdn-learn.adafruit.com/assets/assets/000/098/499/medium260/adafruit_products_4867_top_v2_ORIG_2021_01.jpg?1609958763 260w,
+               https://cdn-learn.adafruit.com/assets/assets/000/098/499/medium640/adafruit_products_4867_top_v2_ORIG_2021_01.jpg?1609958763 640w,
+               https://cdn-learn.adafruit.com/assets/assets/000/098/499/medium800/adafruit_products_4867_top_v2_ORIG_2021_01.jpg?1609958763 800w,
+               https://cdn-learn.adafruit.com/assets/assets/000/098/499/large1024/adafruit_products_4867_top_v2_ORIG_2021_01.jpg?1609958763 1024w" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 65vw, (max-width: 1365px) 47vw, 750px" src="./Overview _ Adafruit SCD-30 - NDIR CO2 Temperature and Humidity Sensor _ Adafruit Learning System_files/adafruit_products_4867_top_v2_ORIG_2021_01.jpg" alt="adafruit_products_4867_top_v2_ORIG_2021_01.jpg">
+<span class="image-expand"><i class="fa fa-search-plus"></i></span>
+</a> </div>
+<div class="row-fluid text-element">
+<p>Data is read over I2C, so it works very nicely with just about any microcontroller or microcomputer. We've written both Arduino and Python/CircuitPython code so you can get started in a jiffy. Another nice element to this sensor is it comes with an <a href="https://www.adafruit.com/product/2857">SHT31 temperature and humidity sensor already built in</a>. The sensor is used to compensate the NDIR CO2 sensor, but its also readable so you get full environmental data.</p>
+</div>
+<div class="row-fluid image-element" aria-label="Image: adafruit_products_4867_quarter_ORIG_2021_01.jpg">
+<a href="https://learn.adafruit.com/assets/98489">
+<img class="98489-asset img-responsive" srcset="https://cdn-learn.adafruit.com/assets/assets/000/098/489/medium260/adafruit_products_4867_quarter_ORIG_2021_01.jpg?1609953238 260w,
+               https://cdn-learn.adafruit.com/assets/assets/000/098/489/medium640/adafruit_products_4867_quarter_ORIG_2021_01.jpg?1609953238 640w,
+               https://cdn-learn.adafruit.com/assets/assets/000/098/489/medium800/adafruit_products_4867_quarter_ORIG_2021_01.jpg?1609953238 800w,
+               https://cdn-learn.adafruit.com/assets/assets/000/098/489/large1024/adafruit_products_4867_quarter_ORIG_2021_01.jpg?1609953238 1024w" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 65vw, (max-width: 1365px) 47vw, 750px" src="./Overview _ Adafruit SCD-30 - NDIR CO2 Temperature and Humidity Sensor _ Adafruit Learning System_files/adafruit_products_4867_quarter_ORIG_2021_01.jpg" alt="adafruit_products_4867_quarter_ORIG_2021_01.jpg">
+<span class="image-expand"><i class="fa fa-search-plus"></i></span>
+</a> </div>
+<div class="row-fluid text-element">
+<p>Nice sensor right? So we made it easy for you to get right into your next project. The sensor is hand-soldered onto a custom made PCB in the<a title="STEMMA QT form factor" href="https://www.adafruit.com/?q=stemma%20qt%20sensor">&nbsp;<strong>STEMMA QT</strong>&nbsp;form factor</a>, making them easy to interface with. The&nbsp;<a href="https://learn.adafruit.com/introducing-adafruit-stemma-qt/what-is-stemma-qt">STEMMA QT connectors</a>&nbsp;on either side are compatible with the&nbsp;<a href="https://www.sparkfun.com/qwiic">SparkFun Qwiic</a> I2C connectors. This allows you to make solderless connections between your development board and the SCD-30 or to chain it with a wide range of other sensors and accessories using a <a href="https://www.adafruit.com/?q=stemma%20qt%20cable"><strong>compatible cable</strong></a>.</p>
+<p>We’ve of course broken out all the pins to standard headers and added a 3.3V voltage regulator and level shifting so allow you to use it with either 3.3V or 5V systems such as the Raspberry Pi, or Metro M4 or Arduino Uno.</p>
+</div>
+<div class="row-fluid image-element" aria-label="Image: adafruit_products_4867_side_ORIG_2021_01.jpg">
+<a href="https://learn.adafruit.com/assets/98488">
+<img class="98488-asset img-responsive" srcset="https://cdn-learn.adafruit.com/assets/assets/000/098/488/medium260/adafruit_products_4867_side_ORIG_2021_01.jpg?1609953205 260w,
+               https://cdn-learn.adafruit.com/assets/assets/000/098/488/medium640/adafruit_products_4867_side_ORIG_2021_01.jpg?1609953205 640w,
+               https://cdn-learn.adafruit.com/assets/assets/000/098/488/medium800/adafruit_products_4867_side_ORIG_2021_01.jpg?1609953205 800w,
+               https://cdn-learn.adafruit.com/assets/assets/000/098/488/large1024/adafruit_products_4867_side_ORIG_2021_01.jpg?1609953205 1024w" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 65vw, (max-width: 1365px) 47vw, 750px" src="./Overview _ Adafruit SCD-30 - NDIR CO2 Temperature and Humidity Sensor _ Adafruit Learning System_files/adafruit_products_4867_side_ORIG_2021_01.jpg" alt="adafruit_products_4867_side_ORIG_2021_01.jpg">
+<span class="image-expand"><i class="fa fa-search-plus"></i></span>
+</a> </div>
+</div>
+</div>
+<div class="page-header-wrapper">
+<h2 class="headline" aria-label="Page title">
+<span id="pinouts">Pinouts</span>
+</h2>
+<div class="badges">
+</div>
+</div>
+<div class="page-content">
+<div class="" role="region" aria-label="Page content">
+<div class="row-fluid image-element" aria-label="Image: adafruit_products_SCD30_pinouts.jpg">
+<a href="https://learn.adafruit.com/assets/98492">
+<img class="98492-asset img-responsive" srcset="https://cdn-learn.adafruit.com/assets/assets/000/098/492/medium260/adafruit_products_SCD30_pinouts.jpg?1609953331 260w,
+               https://cdn-learn.adafruit.com/assets/assets/000/098/492/medium640/adafruit_products_SCD30_pinouts.jpg?1609953331 640w,
+               https://cdn-learn.adafruit.com/assets/assets/000/098/492/medium800/adafruit_products_SCD30_pinouts.jpg?1609953331 800w,
+               https://cdn-learn.adafruit.com/assets/assets/000/098/492/large1024/adafruit_products_SCD30_pinouts.jpg?1609953331 1024w" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 65vw, (max-width: 1365px) 47vw, 750px" src="./Overview _ Adafruit SCD-30 - NDIR CO2 Temperature and Humidity Sensor _ Adafruit Learning System_files/adafruit_products_SCD30_pinouts.jpg" alt="adafruit_products_SCD30_pinouts.jpg">
+<span class="image-expand"><i class="fa fa-search-plus"></i></span>
+</a> </div>
+<div class="row-fluid text-element">
+<h2>
+<div class="anchor-anchor">
+<a href="https://learn.adafruit.com/adafruit-scd30?view=all#power-pins-3081014" class="anchor-link"><span class="fa fa-link"></span></a><span id="power-pins-3081014" class="anchor-link-target"></span>
+</div>Power Pins</h2>
+<ul class="ul1">
+<li class="li2"><span class="s1"><strong>VIN</strong> - this is the power pin. Since the sensor chip uses 3 VDC, we have included a voltage regulator on board that will take 3-5VDC and safely convert it down. To power the board, give it the same power as the logic level of your microcontroller - e.g. for a 5V microcontroller like Arduino, use 5V</span></li>
+<li class="li2"><span class="s1"><strong>3Vo</strong>&nbsp;- this is the 3.3V output from the voltage regulator, you can grab up to 100mA from this if you like</span></li>
+<li class="li2"><span class="s1"><strong>GND</strong> - common ground for power and logic</span></li>
+</ul>
+</div>
+<div class="row-fluid text-element">
+<h2>
+<div class="anchor-anchor">
+<a href="https://learn.adafruit.com/adafruit-scd30?view=all#i2c-logic-pins-3081015" class="anchor-link"><span class="fa fa-link"></span></a><span id="i2c-logic-pins-3081015" class="anchor-link-target"></span>
+</div>I2C Logic Pins</h2>
+<ul class="ul1">
+<li class="li2"><span class="s1"><strong>SCL </strong>- I2C clock pin, connect to your microcontroller I2C clock line. This pin is level shifted so you can use 3-5V logic, and there's a <strong>10K pullup</strong> on this pin.</span></li>
+<li class="li2"><span class="s1"><strong>SDA </strong>- I2C data pin, connect to your microcontroller I2C data line. This pin is level shifted so you can use 3-5V logic, and there's a <strong>10K pullup</strong> on this pin.</span></li>
+<li class="li2">
+<span class="s2"><a href="https://learn.adafruit.com/introducing-adafruit-stemma-qt"><span class="s3"><strong>STEMMA QT</strong></span></a></span><span class="s1"><strong>&nbsp;- </strong>These connectors allow you to connect to dev boards with <strong>STEMMA QT</strong> connectors or to other things with&nbsp;<a href="https://www.adafruit.com/?q=JST%20SH%204"><span class="s4">various associated accessories</span></a></span>
+</li>
+</ul>
+</div>
+<div class="row-fluid text-element">
+<h2>
+<div class="anchor-anchor">
+<a href="https://learn.adafruit.com/adafruit-scd30?view=all#other-pins-3081016" class="anchor-link"><span class="fa fa-link"></span></a><span id="other-pins-3081016" class="anchor-link-target"></span>
+</div>Other Pins</h2>
+<ul>
+<li>
+<strong>RDY </strong>- Data Ready Pin. High when data is ready for read-out, it helps if you want to avoid polling the I2C port to verify data is ready.</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="page-header-wrapper">
+<h2 class="headline" aria-label="Page title">
+<span id="arduino">Arduino</span>
+</h2>
+<div class="badges">
+</div>
+</div>
+<div class="page-content">
+<div class="" role="region" aria-label="Page content">
+<div class="row-fluid text-element">
+<p><span class="s1">Using the SCD30</span><span class="s1"> with Arduino is a simple matter of wiring up the sensor to your Arduino-compatible microcontroller, installing the <a href="https://github.com/adafruit/Adafruit_SCD30" target="_blank">Adafruit SCD30</a> library we've written, and running the provided example code.</span></p>
+</div>
+<div class="row-fluid text-element">
+<h2 class="p4">
+<div class="anchor-anchor">
+<a href="https://learn.adafruit.com/adafruit-scd30?view=all#i2c-wiring-3081071" class="anchor-link"><span class="fa fa-link"></span></a><span id="i2c-wiring-3081071" class="anchor-link-target"></span>
+</div>
+<span class="s1"><strong>I2C Wiring</strong></span>
+</h2>
+<p class="p5"><span class="s1">Here is how to wire up the sensor using one of the <a href="https://learn.adafruit.com/introducing-adafruit-stemma-qt"><span class="s2"><strong>STEMMA QT</strong></span></a> connectors. The examples show a Metro but wiring will work the same for an Arduino or other compatible board.</span></p>
+</div>
+<div class="side-element">
+<div class="side-images">
+<div class="anchor-anchor">
+<a href="https://learn.adafruit.com/adafruit-scd30?view=all#step-3081072" class="anchor-link"><span class="fa fa-link"></span></a>
+</div>
+<span id="step-3081072" class="anchor-link-target"></span>
+<ul>
+<li class="medium-side">
+<a class="large-side-image-link" href="https://learn.adafruit.com/assets/98479">
+<img class="98479-asset medium-side-image img-responsive" src="./Overview _ Adafruit SCD-30 - NDIR CO2 Temperature and Humidity Sensor _ Adafruit Learning System_files/adafruit_products_SCD30_arduino_I2C_STEMMA_bb.jpg" alt="adafruit_products_SCD30_arduino_I2C_STEMMA_bb.jpg">
+</a></li>
+</ul>
+</div>
+<div class="side-text"><div class="text"><ul class="ul1">
+<li class="li5"><span class="s1">Connect&nbsp;<strong>board VIN (red wire) </strong>to&nbsp;<strong>Arduino 5V</strong>&nbsp;if you are running a <strong>5V</strong> board Arduino (Uno, etc.).&nbsp;If your board is<strong> 3V, </strong>connect to that instead.</span></li>
+<li class="li5"><span class="s1">Connect<strong> board GND (black wire)&nbsp;</strong>to&nbsp;<strong>Arduino</strong> <strong>GND</strong></span></li>
+<li class="li5"><span class="s1">Connect<strong> board SCL (yellow wire)&nbsp;</strong>to&nbsp;<strong>Arduino</strong> <strong>SCL</strong></span></li>
+<li class="li5"><span class="s1">Connect<strong> board SDA (blue wire)&nbsp;</strong>to&nbsp;<strong>Arduino</strong> <strong>SDA</strong></span></li>
+</ul></div></div>
+</div>
+<div class="row-fluid text-element">
+<p><span class="s1">Here is how to wire the sensor to a board using a solderless breadboard:</span></p>
+</div>
+<div class="side-element">
+<div class="side-images">
+<div class="anchor-anchor">
+<a href="https://learn.adafruit.com/adafruit-scd30?view=all#step-3081074" class="anchor-link"><span class="fa fa-link"></span></a>
+</div>
+<span id="step-3081074" class="anchor-link-target"></span>
+<ul>
+<li class="medium-side">
+<a class="large-side-image-link" href="https://learn.adafruit.com/assets/98480">
+<img class="98480-asset medium-side-image img-responsive" src="./Overview _ Adafruit SCD-30 - NDIR CO2 Temperature and Humidity Sensor _ Adafruit Learning System_files/adafruit_products_SCD30_arduino_I2C_breadboard_bb.jpg" alt="adafruit_products_SCD30_arduino_I2C_breadboard_bb.jpg">
+</a></li>
+</ul>
+</div>
+<div class="side-text"><div class="text"><ul>
+<li class="li5"><span class="s1">Connect&nbsp;<strong>board VIN (red wire) </strong>to&nbsp;<strong>Arduino 5V</strong>&nbsp;if you are running a <strong>5V</strong> board Arduino (Uno, etc.).&nbsp;If your board is<strong> 3V, </strong>connect to that instead.</span></li>
+<li class="li5"><span class="s1">Connect<strong> board GND (black wire)&nbsp;</strong>to&nbsp;<strong>Arduino</strong> <strong>GND</strong></span></li>
+<li class="li5"><span class="s1">Connect<strong> board SCL (yellow wire)&nbsp;</strong>to&nbsp;<strong>Arduino</strong> <strong>SCL</strong></span></li>
+<li class="li5"><span class="s1">Connect<strong> board SDA (blue wire)&nbsp;</strong>to&nbsp;<strong>Arduino</strong> <strong>SDA</strong></span></li>
+</ul></div></div>
+</div>
+<div class="row-fluid text-element">
+<h2 class="p4">
+<div class="anchor-anchor">
+<a href="https://learn.adafruit.com/adafruit-scd30?view=all#library-installation-3081075" class="anchor-link"><span class="fa fa-link"></span></a><span id="library-installation-3081075" class="anchor-link-target"></span>
+</div>
+<span class="s1"><strong>Library Installation</strong></span>
+</h2>
+<p class="p2"><span class="s1">You can install the <strong>Adafruit SCD30</strong> library for Arduino using the Library Manager in the Arduino IDE.</span></p>
+</div>
+<div class="row-fluid image-element" aria-label="Image: adafruit_products_Arduino_Manage_Libraries.png">
+<a href="https://learn.adafruit.com/assets/98481">
+<img class="98481-asset img-responsive" srcset="https://cdn-learn.adafruit.com/assets/assets/000/098/481/medium260/adafruit_products_Arduino_Manage_Libraries.png?1609893656 260w,
+               https://cdn-learn.adafruit.com/assets/assets/000/098/481/medium640/adafruit_products_Arduino_Manage_Libraries.png?1609893656 640w,
+               https://cdn-learn.adafruit.com/assets/assets/000/098/481/medium800/adafruit_products_Arduino_Manage_Libraries.png?1609893656 800w,
+               https://cdn-learn.adafruit.com/assets/assets/000/098/481/large1024/adafruit_products_Arduino_Manage_Libraries.png?1609893656 1024w" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 65vw, (max-width: 1365px) 47vw, 750px" src="./Overview _ Adafruit SCD-30 - NDIR CO2 Temperature and Humidity Sensor _ Adafruit Learning System_files/adafruit_products_Arduino_Manage_Libraries.png" alt="adafruit_products_Arduino_Manage_Libraries.png">
+<span class="image-expand"><i class="fa fa-search-plus"></i></span>
+</a> </div>
+<div class="row-fluid text-element">
+<p><span class="s1">Click the&nbsp;<strong>Manage Libraries ...</strong> menu item, search for <strong>Adafruit SCD30 </strong>,&nbsp;and select the&nbsp;<strong>Adafruit&nbsp;</strong><strong>SCD30</strong> library:</span></p>
+</div>
+<div class="row-fluid image-element" aria-label="Image: adafruit_products_SCD30_arduino_lib_install.png">
+<a href="https://learn.adafruit.com/assets/98482">
+<img class="98482-asset img-responsive" srcset="https://cdn-learn.adafruit.com/assets/assets/000/098/482/medium260/adafruit_products_SCD30_arduino_lib_install.png?1609947386 260w,
+               https://cdn-learn.adafruit.com/assets/assets/000/098/482/medium640/adafruit_products_SCD30_arduino_lib_install.png?1609947386 640w,
+               https://cdn-learn.adafruit.com/assets/assets/000/098/482/medium800/adafruit_products_SCD30_arduino_lib_install.png?1609947386 800w,
+               https://cdn-learn.adafruit.com/assets/assets/000/098/482/large1024/adafruit_products_SCD30_arduino_lib_install.png?1609947386 1024w" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 65vw, (max-width: 1365px) 47vw, 750px" src="./Overview _ Adafruit SCD-30 - NDIR CO2 Temperature and Humidity Sensor _ Adafruit Learning System_files/adafruit_products_SCD30_arduino_lib_install.png" alt="adafruit_products_SCD30_arduino_lib_install.png">
+<span class="image-expand"><i class="fa fa-search-plus"></i></span>
+</a> </div>
+<div class="row-fluid text-element">
+<p>Finally, search for <strong>Adafruit Unified Sensor</strong> and install that too (you may have to scroll a bit)</p>
+</div>
+<div class="row-fluid image-element" aria-label="Image: adafruit_products_Arduino_adafruit_unified_sensor_install.png">
+<a href="https://learn.adafruit.com/assets/98483">
+<img class="98483-asset img-responsive" srcset="https://cdn-learn.adafruit.com/assets/assets/000/098/483/medium260/adafruit_products_Arduino_adafruit_unified_sensor_install.png?1609947437 260w,
+               https://cdn-learn.adafruit.com/assets/assets/000/098/483/medium640/adafruit_products_Arduino_adafruit_unified_sensor_install.png?1609947437 640w,
+               https://cdn-learn.adafruit.com/assets/assets/000/098/483/medium800/adafruit_products_Arduino_adafruit_unified_sensor_install.png?1609947437 800w,
+               https://cdn-learn.adafruit.com/assets/assets/000/098/483/large1024/adafruit_products_Arduino_adafruit_unified_sensor_install.png?1609947437 1024w" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 65vw, (max-width: 1365px) 47vw, 750px" src="./Overview _ Adafruit SCD-30 - NDIR CO2 Temperature and Humidity Sensor _ Adafruit Learning System_files/adafruit_products_Arduino_adafruit_unified_sensor_install.png" alt="adafruit_products_Arduino_adafruit_unified_sensor_install.png">
+<span class="image-expand"><i class="fa fa-search-plus"></i></span>
+</a> </div>
+<div class="row-fluid text-element">
+<h2 class="p4">
+<div class="anchor-anchor">
+<a href="https://learn.adafruit.com/adafruit-scd30?view=all#load-example-3081081" class="anchor-link"><span class="fa fa-link"></span></a><span id="load-example-3081081" class="anchor-link-target"></span>
+</div>
+<span class="s1"><strong>Load Example</strong></span>
+</h2>
+<p class="p2"><span class="s1">Open up&nbsp;<strong>File -&gt; Examples -&gt; Adafruit SCD30 -&gt; adafruit_scd30_test</strong></span></p>
+</div>
+<div class="row-fluid image-element" aria-label="Image: adafruit_products_SCD30_Arduino_open_test.png">
+<a href="https://learn.adafruit.com/assets/98485">
+<img class="98485-asset img-responsive" srcset="https://cdn-learn.adafruit.com/assets/assets/000/098/485/medium260/adafruit_products_SCD30_Arduino_open_test.png?1609949266 260w,
+               https://cdn-learn.adafruit.com/assets/assets/000/098/485/medium640/adafruit_products_SCD30_Arduino_open_test.png?1609949266 640w,
+               https://cdn-learn.adafruit.com/assets/assets/000/098/485/medium800/adafruit_products_SCD30_Arduino_open_test.png?1609949266 800w,
+               https://cdn-learn.adafruit.com/assets/assets/000/098/485/large1024/adafruit_products_SCD30_Arduino_open_test.png?1609949266 1024w" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 65vw, (max-width: 1365px) 47vw, 750px" src="./Overview _ Adafruit SCD-30 - NDIR CO2 Temperature and Humidity Sensor _ Adafruit Learning System_files/adafruit_products_SCD30_Arduino_open_test.png" alt="adafruit_products_SCD30_Arduino_open_test.png">
+<span class="image-expand"><i class="fa fa-search-plus"></i></span>
+</a> </div>
+<div class="row-fluid text-element">
+<p><span class="s1">After opening the demo file, upload to your Arduino wired up to the sensor. Once you upload the code, you will see the <strong>temperature, humidity and eCO2 data</strong>&nbsp;values being printed when you open the Serial Monitor (<strong>Tools-&gt;Serial Monitor</strong>) at <strong>115200 baud</strong>, similar to this:</span></p>
+</div>
+<div class="row-fluid image-element" aria-label="Image: adafruit_products_image.png">
+<a href="https://learn.adafruit.com/assets/98495">
+<img class="98495-asset img-responsive" srcset="https://cdn-learn.adafruit.com/assets/assets/000/098/495/medium260/adafruit_products_image.png?1609955536 260w,
+               https://cdn-learn.adafruit.com/assets/assets/000/098/495/medium640/adafruit_products_image.png?1609955536 640w,
+               https://cdn-learn.adafruit.com/assets/assets/000/098/495/medium800/adafruit_products_image.png?1609955536 800w,
+               https://cdn-learn.adafruit.com/assets/assets/000/098/495/large1024/adafruit_products_image.png?1609955536 1024w" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 65vw, (max-width: 1365px) 47vw, 750px" src="./Overview _ Adafruit SCD-30 - NDIR CO2 Temperature and Humidity Sensor _ Adafruit Learning System_files/adafruit_products_image.png" alt="adafruit_products_image.png">
+<span class="image-expand"><i class="fa fa-search-plus"></i></span>
+</a> </div>
+
+<div class="row-fluid alert-element alert-info" aria-label="Alert" aria-describedby="alert-content-3081103">
+<div class="alert">
+<i class="fa fa-exclamation-circle"></i>
+<span id="alert-content-3081103" class="alert-content">Its normal for the first CO2 reading to be 0, simply ignore the first reading when logging data.</span>
+</div>
+</div>
+<div class="row-fluid text-element">
+<p>The sensor has a lot going on, there's temperature and humidity reading thanks to an SHT31 sensor on board. These values are used internally to normalize the NDIR CO2 readings as well. You can only get data every 2 seconds, which is pretty fast for this kind of sensor! If you want to slow down the readings to reduce power usage, uncomment this section:</p>
+</div>
+<div class="code-element" aria-label="Code element">
+<div class="download-code
+    ">
+<a data-turbo="false" class="download-button" href="https://learn.adafruit.com/pages/21352/elements/3081105/download">
+<i class="fa fa-cloud"></i> Download File
+</a> <div class="code-copy-container">
+<a href="https://learn.adafruit.com/adafruit-scd30?view=all#" class="code-copy-button"><i class="fa fa-clipboard"></i> Copy Code</a>
+</div>
+</div>
+<pre class="code-text-only" style="display: none;">// if (!scd30.setMeasurementInterval(10)){
+//   Serial.println("Failed to set measurement interval");
+//   while(1){ delay(10);}
+// }</pre>
+<pre class="prettyprint language-python hljs">// <span class="hljs-keyword">if</span> (!scd30.setMeasurementInterval(<span class="hljs-number">10</span>)){
+//   Serial.println(<span class="hljs-string">"Failed to set measurement interval"</span>);
+//   <span class="hljs-keyword">while</span>(<span class="hljs-number">1</span>){ delay(<span class="hljs-number">10</span>);}
+// }</pre>
+</div>
+<div class="row-fluid text-element">
+<p>The valid range is 2 seconds per reading up to 1800 seconds per reading.</p>
+</div>
+<div class="row-fluid text-element">
+<h2>
+<div class="anchor-anchor">
+<a href="https://learn.adafruit.com/adafruit-scd30?view=all#example-code-3081085" class="anchor-link"><span class="fa fa-link"></span></a><span id="example-code-3081085" class="anchor-link-target"></span>
+</div>Example Code</h2>
+</div>
+<div class="code-element" aria-label="Code element">
+<div class="download-code
+    ">
+<a data-turbo="false" class="download-button" href="https://learn.adafruit.com/pages/21352/elements/3081086/download">
+<i class="fa fa-cloud"></i> Download File
+</a> <div class="code-copy-container">
+<a href="https://learn.adafruit.com/adafruit-scd30?view=all#" class="code-copy-button"><i class="fa fa-clipboard"></i> Copy Code</a>
+</div>
+</div>
+<pre class="code-text-only" style="display: none;">// Basic demo for readings from Adafruit SCD30
+#include &lt;Adafruit_SCD30.h&gt;
+
+Adafruit_SCD30  scd30;
+
+
+void setup(void) {
+  Serial.begin(115200);
+  while (!Serial) delay(10);     // will pause Zero, Leonardo, etc until serial console opens
+
+  Serial.println("Adafruit SCD30 test!");
+
+  // Try to initialize!
+  if (!scd30.begin()) {
+    Serial.println("Failed to find SCD30 chip");
+    while (1) { delay(10); }
+  }
+  Serial.println("SCD30 Found!");
+
+
+  // if (!scd30.setMeasurementInterval(10)){
+  //   Serial.println("Failed to set measurement interval");
+  //   while(1){ delay(10);}
+  // }
+  Serial.print("Measurement Interval: "); 
+  Serial.print(scd30.getMeasurementInterval()); 
+  Serial.println(" seconds");
+}
+
+void loop() {
+  if (scd30.dataReady()){
+    Serial.println("Data available!");
+
+    if (!scd30.read()){ Serial.println("Error reading sensor data"); return; }
+
+    Serial.print("Temperature: ");
+    Serial.print(scd30.temperature);
+    Serial.println(" degrees C");
+    
+    Serial.print("Relative Humidity: ");
+    Serial.print(scd30.relative_humidity);
+    Serial.println(" %");
+    
+    Serial.print("CO2: ");
+    Serial.print(scd30.CO2, 3);
+    Serial.println(" ppm");
+    Serial.println("");
+  } else {
+    //Serial.println("No data");
+  }
+
+  delay(100);
+}</pre>
+<pre class="prettyprint embed hljs language-go"><span class="hljs-comment">// Basic demo for readings from Adafruit SCD30</span>
+#include &lt;Adafruit_SCD30.h&gt;
+
+Adafruit_SCD30  scd30;
+
+
+void setup(void) {
+  Serial.begin(<span class="hljs-number">115200</span>);
+  while (!Serial) delay(<span class="hljs-number">10</span>);     <span class="hljs-comment">// will pause Zero, Leonardo, etc until serial console opens</span>
+
+  Serial.<span class="hljs-built_in">println</span>(<span class="hljs-string">"Adafruit SCD30 test!"</span>);
+
+  <span class="hljs-comment">// Try to initialize!</span>
+  <span class="hljs-keyword">if</span> (!scd30.begin()) {
+    Serial.<span class="hljs-built_in">println</span>(<span class="hljs-string">"Failed to find SCD30 chip"</span>);
+    while (<span class="hljs-number">1</span>) { delay(<span class="hljs-number">10</span>); }
+  }
+  Serial.<span class="hljs-built_in">println</span>(<span class="hljs-string">"SCD30 Found!"</span>);
+
+
+  <span class="hljs-comment">// if (!scd30.setMeasurementInterval(10)){</span>
+  <span class="hljs-comment">//   Serial.println("Failed to set measurement interval");</span>
+  <span class="hljs-comment">//   while(1){ delay(10);}</span>
+  <span class="hljs-comment">// }</span>
+  Serial.<span class="hljs-built_in">print</span>(<span class="hljs-string">"Measurement Interval: "</span>); 
+  Serial.<span class="hljs-built_in">print</span>(scd30.getMeasurementInterval()); 
+  Serial.<span class="hljs-built_in">println</span>(<span class="hljs-string">" seconds"</span>);
+}
+
+void loop() {
+  <span class="hljs-keyword">if</span> (scd30.dataReady()){
+    Serial.<span class="hljs-built_in">println</span>(<span class="hljs-string">"Data available!"</span>);
+
+    <span class="hljs-keyword">if</span> (!scd30.read()){ Serial.<span class="hljs-built_in">println</span>(<span class="hljs-string">"Error reading sensor data"</span>); <span class="hljs-keyword">return</span>; }
+
+    Serial.<span class="hljs-built_in">print</span>(<span class="hljs-string">"Temperature: "</span>);
+    Serial.<span class="hljs-built_in">print</span>(scd30.temperature);
+    Serial.<span class="hljs-built_in">println</span>(<span class="hljs-string">" degrees C"</span>);
+    
+    Serial.<span class="hljs-built_in">print</span>(<span class="hljs-string">"Relative Humidity: "</span>);
+    Serial.<span class="hljs-built_in">print</span>(scd30.relative_humidity);
+    Serial.<span class="hljs-built_in">println</span>(<span class="hljs-string">" %"</span>);
+    
+    Serial.<span class="hljs-built_in">print</span>(<span class="hljs-string">"CO2: "</span>);
+    Serial.<span class="hljs-built_in">print</span>(scd30.CO2, <span class="hljs-number">3</span>);
+    Serial.<span class="hljs-built_in">println</span>(<span class="hljs-string">" ppm"</span>);
+    Serial.<span class="hljs-built_in">println</span>(<span class="hljs-string">""</span>);
+  } <span class="hljs-keyword">else</span> {
+    <span class="hljs-comment">//Serial.println("No data");</span>
+  }
+
+  delay(<span class="hljs-number">100</span>);
+}</pre>
+<div class="code-element-footer">
+<a target="_blank" rel="noopener noreferrer" href="https://github.com/adafruit/Adafruit_SCD30/blob/master/examples/adafruit_scd30_test/adafruit_scd30_test.ino">
+<i class="fa fa-github"></i>
+View on GitHub
+</a> </div>
+</div>
+</div>
+</div>
+<div class="page-header-wrapper">
+<h2 class="headline" aria-label="Page title">
+<span id="python-circuitpython">Python &amp; CircuitPython</span>
+</h2>
+<div class="badges">
+</div>
+</div>
+<div class="page-content">
+<div class="" role="region" aria-label="Page content">
+<div class="row-fluid text-element">
+<p class="p2"><span class="s1">It's easy to use the <strong>SCD-30</strong> with Python or CircuitPython, and the <a href="https://github.com/adafruit/Adafruit_CircuitPython_SCD30" target="_blank">Adafruit CircuitPython SCD30</a> module. This module allows you to easily write Python code that reads CO2, temperature, and humidity from the <strong>SCD30</strong> sensor.</span></p>
+<p class="p2"><span class="s1">You can use this sensor with any CircuitPython microcontroller board or with a computer that has GPIO and Python <a href="https://learn.adafruit.com/circuitpython-on-raspberrypi-linux"><span class="s2">thanks to Adafruit_Blinka, our CircuitPython-for-Python compatibility library</span></a>.</span></p>
+</div>
+<div class="row-fluid text-element">
+<h2 class="p3">
+<div class="anchor-anchor">
+<a href="https://learn.adafruit.com/adafruit-scd30?view=all#circuitpython-microcontroller-wiring-3081028" class="anchor-link"><span class="fa fa-link"></span></a><span id="circuitpython-microcontroller-wiring-3081028" class="anchor-link-target"></span>
+</div>
+<span class="s1"><strong>CircuitPython Microcontroller Wiring</strong></span>
+</h2>
+<p class="p2"><span class="s1">First wire up a SCD-30 to your board exactly as shown below. Here's an example of wiring a Feather M4 to the sensor with I2C using one of the handy <a href="https://learn.adafruit.com/introducing-adafruit-stemma-qt"><span class="s2"><strong>STEMMA QT</strong></span></a> connectors:</span></p>
+</div>
+<div class="side-element">
+<div class="side-images">
+<div class="anchor-anchor">
+<a href="https://learn.adafruit.com/adafruit-scd30?view=all#step-3081065" class="anchor-link"><span class="fa fa-link"></span></a>
+</div>
+<span id="step-3081065" class="anchor-link-target"></span>
+<ul>
+<li class="medium-side">
+<a class="large-side-image-link" href="https://learn.adafruit.com/assets/98474">
+<img class="98474-asset medium-side-image img-responsive" src="./Overview _ Adafruit SCD-30 - NDIR CO2 Temperature and Humidity Sensor _ Adafruit Learning System_files/adafruit_products_SCD30_Feather_I2C_STEMMA_bb.jpg" alt="adafruit_products_SCD30_Feather_I2C_STEMMA_bb.jpg">
+</a></li>
+</ul>
+</div>
+<div class="side-text"><div class="text"><ul>
+<li class="li5"><span class="s1"><strong>Board 3V</strong>&nbsp;to&nbsp;<strong>sensor VIN (red wire)</strong></span></li>
+<li class="li5"><span class="s1"><strong>Board GND</strong>&nbsp;to&nbsp;<strong>sensor GND (black wire)</strong></span></li>
+<li class="li5"><span class="s1"><strong>Board SCL</strong>&nbsp;to&nbsp;<strong>sensor SCL (yellow wire)</strong></span></li>
+<li class="li5"><span class="s1"><strong>Board SDA</strong>&nbsp;to&nbsp;<strong>sensor SDA (blue wire)</strong></span></li>
+</ul></div></div>
+</div>
+<div class="row-fluid text-element">
+<p><span class="s1">You can also use the standard <strong>0.100" pitch</strong> headers to wire it up on a breadboard:</span></p>
+</div>
+<div class="side-element">
+<div class="side-images">
+<div class="anchor-anchor">
+<a href="https://learn.adafruit.com/adafruit-scd30?view=all#step-3081066" class="anchor-link"><span class="fa fa-link"></span></a>
+</div>
+<span id="step-3081066" class="anchor-link-target"></span>
+<ul>
+<li class="medium-side">
+<a class="large-side-image-link" href="https://learn.adafruit.com/assets/98475">
+<img class="98475-asset medium-side-image img-responsive" src="./Overview _ Adafruit SCD-30 - NDIR CO2 Temperature and Humidity Sensor _ Adafruit Learning System_files/adafruit_products_SCD30_Feather_I2C_breadboard_bb.jpg" alt="adafruit_products_SCD30_Feather_I2C_breadboard_bb.jpg">
+</a></li>
+</ul>
+</div>
+<div class="side-text"><div class="text"><ul>
+<li class="li5"><span class="s1"><strong>Board 3V</strong>&nbsp;to&nbsp;<strong>sensor VIN (red wire)</strong></span></li>
+<li class="li5"><span class="s1"><strong>Board GND</strong>&nbsp;to&nbsp;<strong>sensor GND (black wire)</strong></span></li>
+<li class="li5"><span class="s1"><strong>Board SCL</strong>&nbsp;to&nbsp;<strong>sensor SCL (yellow wire)</strong></span></li>
+<li class="li5"><span class="s1"><strong>Board SDA</strong>&nbsp;to&nbsp;<strong>sensor SDA (blue wire)</strong></span></li>
+</ul></div></div>
+</div>
+<div class="row-fluid text-element">
+<h2 class="p3">
+<div class="anchor-anchor">
+<a href="https://learn.adafruit.com/adafruit-scd30?view=all#python-computer-wiring-3081030" class="anchor-link"><span class="fa fa-link"></span></a><span id="python-computer-wiring-3081030" class="anchor-link-target"></span>
+</div>
+<span class="s1"><strong>Python Computer Wiring</strong></span>
+</h2>
+<p class="p2"><span class="s1">Since there's <em>dozens</em> of Linux computers/boards you can use, we will show wiring for Raspberry Pi. For other platforms, <a href="https://learn.adafruit.com/circuitpython-on-raspberrypi-linux"><span class="s2">please visit the guide for CircuitPython on Linux to see whether your platform is supported</span></a>.&nbsp;</span></p>
+<p class="p2"><span class="s1">Here's the Raspberry Pi wired to the sensor using I2C and a <a href="https://learn.adafruit.com/introducing-adafruit-stemma-qt"><span class="s2"><strong>STEMMA QT</strong></span></a> connector:</span></p>
+</div>
+<div class="side-element">
+<div class="side-images">
+<div class="anchor-anchor">
+<a href="https://learn.adafruit.com/adafruit-scd30?view=all#step-3081067" class="anchor-link"><span class="fa fa-link"></span></a>
+ </div>
+<span id="step-3081067" class="anchor-link-target"></span>
+<ul>
+<li class="medium-side">
+<a class="large-side-image-link" href="https://learn.adafruit.com/assets/100960">
+<img class="100960-asset medium-side-image img-responsive" src="./Overview _ Adafruit SCD-30 - NDIR CO2 Temperature and Humidity Sensor _ Adafruit Learning System_files/adafruit_products_SCD30_RasPi_I2C_STEMMA_bb.jpg" alt="adafruit_products_SCD30_RasPi_I2C_STEMMA_bb.jpg">
+</a></li>
+</ul>
+</div>
+<div class="side-text"><div class="text"><ul>
+<li class="li5"><span class="s1"><strong>Pi 3V</strong>&nbsp;to&nbsp;<strong>sensor VIN (red wire)</strong></span></li>
+<li class="li5"><span class="s1"><strong>Pi GND</strong>&nbsp;to&nbsp;<strong>sensor GND (black wire)</strong></span></li>
+<li class="li5"><span class="s1"><strong>Pi SCL</strong>&nbsp;to&nbsp;<strong>sensor SCL (yellow wire)</strong></span></li>
+<li class="li5"><span class="s1"><strong>Pi SDA</strong>&nbsp;to&nbsp;<strong>sensor SDA (blue wire)</strong></span></li>
+</ul></div></div>
+</div>
+<div class="row-fluid text-element">
+<p><span class="s1">Finally here is an example of how to wire up a Raspberry Pi to the sensor using a solderless breadboard</span></p>
+</div>
+<div class="side-element">
+<div class="side-images">
+<div class="anchor-anchor">
+<a href="https://learn.adafruit.com/adafruit-scd30?view=all#step-3081068" class="anchor-link"><span class="fa fa-link"></span></a>
+</div>
+<span id="step-3081068" class="anchor-link-target"></span>
+<ul>
+<li class="medium-side">
+<a class="large-side-image-link" href="https://learn.adafruit.com/assets/98478">
+<img class="98478-asset medium-side-image img-responsive" src="./Overview _ Adafruit SCD-30 - NDIR CO2 Temperature and Humidity Sensor _ Adafruit Learning System_files/adafruit_products_SCD30_RasPi_I2C_breadboard_bb.jpg" alt="adafruit_products_SCD30_RasPi_I2C_breadboard_bb.jpg">
+</a></li>
+</ul>
+</div>
+<div class="side-text"><div class="text"><ul>
+<li class="li5"><span class="s1"><strong>Pi 3V</strong>&nbsp;to&nbsp;<strong>sensor VIN (red wire)</strong></span></li>
+<li class="li5"><span class="s1"><strong>Pi GND</strong>&nbsp;to&nbsp;<strong>sensor GND (black wire)</strong></span></li>
+<li class="li5"><span class="s1"><strong>Pi SCL</strong>&nbsp;to&nbsp;<strong>sensor SCL (yellow wire)</strong></span></li>
+<li class="li5"><span class="s1"><strong>Pi SDA</strong>&nbsp;to&nbsp;<strong>sensor SDA (blue wire)</strong></span></li>
+</ul></div></div>
+</div>
+<div class="row-fluid text-element">
+<h2 class="p4">
+<div class="anchor-anchor">
+<a href="https://learn.adafruit.com/adafruit-scd30?view=all#circuitpython-installation-of-scd30-library-3081033" class="anchor-link"><span class="fa fa-link"></span></a><span id="circuitpython-installation-of-scd30-library-3081033" class="anchor-link-target"></span>
+</div>
+<span class="s1"><strong>CircuitPython Installation of SCD30 Library</strong></span>
+</h2>
+<p class="p2"><span class="s1">You'll need to install the <a href="https://github.com/adafruit/Adafruit_CircuitPython_SCD30" target="_blank">Adafruit CircuitPython SCD30</a> library on your CircuitPython board.</span></p>
+<p class="p2"><span class="s1">First make sure you are running the&nbsp;<a href="https://learn.adafruit.com/welcome-to-circuitpython/installing-circuitpython"><span class="s2">latest version of Adafruit CircuitPython</span></a>&nbsp;for your board.</span></p>
+<p class="p2"><span class="s1">Next you'll need to install the necessary libraries&nbsp;to use the hardware--carefully follow the steps to find and install these libraries from&nbsp;<a href="https://circuitpython.org/libraries"><span class="s2">Adafruit's CircuitPython library bundle</span></a>.&nbsp; Our CircuitPython starter guide has <a href="https://learn.adafruit.com/welcome-to-circuitpython/circuitpython-libraries"><span class="s2">a great page on how to install the library bundle</span></a>.</span><span class="s1"></span><span class="s1"></span><span class="s1"></span></p>
+
+</div>
+<div class="side-element">
+<div class="side-images">
+<div class="anchor-anchor">
+<a href="https://learn.adafruit.com/adafruit-scd30?view=all#step-3081089" class="anchor-link"><span class="fa fa-link"></span></a>
+</div>
+<span id="step-3081089" class="anchor-link-target"></span>
+<ul>
+<li class="medium-side">
+<a class="large-side-image-link" href="https://learn.adafruit.com/assets/98486">
+<img class="98486-asset medium-side-image img-responsive" src="./Overview _ Adafruit SCD-30 - NDIR CO2 Temperature and Humidity Sensor _ Adafruit Learning System_files/adafruit_products_SCD30_lib_folder.png" alt="adafruit_products_SCD30_lib_folder.png">
+</a></li>
+</ul>
+</div>
+<div class="side-text"><div class="text"><p>Required libraries:</p>
+<ul>
+<li><strong>adafruit_scd30.mpy</strong></li>
+<li><strong>adafruit_bus_device/</strong></li>
+<li><strong>adafruit_register/</strong></li>
+</ul>
+<p>Your CIRCUITPY drive should look like the image.</p>
+<p><span class="s1">Before continuing make sure your board's <strong>lib</strong> folder or root filesystem has the <strong>adafruit_scd30.mpy </strong>file, and the <strong>adafruit_bus_device </strong>and<strong> adafruit_register</strong> folders copied over.</span></p></div></div>
+</div>
+<div class="row-fluid text-element">
+<h2 class="p4">
+<div class="anchor-anchor">
+<a href="https://learn.adafruit.com/adafruit-scd30?view=all#python-installation-of-scd30-library-3081035" class="anchor-link"><span class="fa fa-link"></span></a><span id="python-installation-of-scd30-library-3081035" class="anchor-link-target"></span>
+</div>
+<span class="s1"><strong>Python Installation of SCD30 Library</strong></span>
+</h2>
+<p class="p2"><span class="s1">You'll need to install the <strong>Adafruit_Blinka</strong> library that provides the CircuitPython support in Python. This may also require enabling I2C on your platform and verifying you are running Python 3.&nbsp;<a href="https://learn.adafruit.com/circuitpython-on-raspberrypi-linux"><span class="s2">Since each platform is a little different, and Linux changes often, please visit the CircuitPython on Linux guide to get your computer ready</span></a>!</span></p>
+<p class="p2"><span class="s1">Once that's done, from your command line run the following command:</span></p>
+<ul class="ul1">
+<li class="li7"><code><span class="s1">sudo pip3 install adafruit-circuitpython-scd30</span></code></li>
+</ul>
+<p class="p2"><span class="s1">If your default Python is version 3 you may need to run 'pip' instead. Just make sure you aren't trying to use CircuitPython on Python 2.x, it isn't supported!</span></p>
+</div>
+<div class="row-fluid text-element">
+<p><span class="s1">Next&nbsp;<a href="https://learn.adafruit.com/welcome-to-circuitpython/the-repl"><span class="s2">connect to the board's serial REPL&nbsp;</span></a>so you are at the CircuitPython&nbsp;</span><span class="s3"><strong>&gt;&gt;&gt;</strong></span><span class="s1">&nbsp;prompt.</span></p>
+</div>
+<div class="row-fluid text-element">
+<h2 class="p4">
+<div class="anchor-anchor">
+<a href="https://learn.adafruit.com/adafruit-scd30?view=all#circuitpython-and-python-usage-3081036" class="anchor-link"><span class="fa fa-link"></span></a><span id="circuitpython-and-python-usage-3081036" class="anchor-link-target"></span>
+</div>
+<span class="s1"><strong>CircuitPython &amp; Python Usage</strong></span>
+</h2>
+<p class="p2"><span class="s1">To demonstrate the usage of the sensor we'll initialize it and read the CO2, temperature and humidity data from the board's Python REPL.</span><span class="s1"></span></p>
+<p class="p2"><span class="s1">Run the following code to import the necessary modules and initialize the I2C connection with the sensor:</span></p>
+</div>
+<div class="code-element" aria-label="Code element">
+<div class="download-code
+    ">
+<a data-turbo="false" class="download-button" href="https://learn.adafruit.com/pages/21351/elements/3081037/download">
+<i class="fa fa-cloud"></i> Download File
+</a> <div class="code-copy-container">
+<a href="https://learn.adafruit.com/adafruit-scd30?view=all#" class="code-copy-button"><i class="fa fa-clipboard"></i> Copy Code</a>
+</div>
+</div>
+<pre class="code-text-only" style="display: none;">import board
+import adafruit_scd30
+
+scd = adafruit_scd30.SCD30(board.I2C())</pre>
+<pre class="prettyprint language-python hljs"><span class="hljs-keyword">import</span> board
+<span class="hljs-keyword">import</span> adafruit_scd30
+
+scd = adafruit_scd30.SCD30(board.I2C())</pre>
+</div>
+<div class="row-fluid image-element" aria-label="Image: adafruit_products_image.png">
+<a href="https://learn.adafruit.com/assets/98496">
+<img class="98496-asset img-responsive" srcset="https://cdn-learn.adafruit.com/assets/assets/000/098/496/medium260/adafruit_products_image.png?1609957224 260w,
+               https://cdn-learn.adafruit.com/assets/assets/000/098/496/medium640/adafruit_products_image.png?1609957224 640w,
+               https://cdn-learn.adafruit.com/assets/assets/000/098/496/medium800/adafruit_products_image.png?1609957224 800w,
+               https://cdn-learn.adafruit.com/assets/assets/000/098/496/large1024/adafruit_products_image.png?1609957224 1024w" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 65vw, (max-width: 1365px) 47vw, 750px" src="./Overview _ Adafruit SCD-30 - NDIR CO2 Temperature and Humidity Sensor _ Adafruit Learning System_files/adafruit_products_image(1).png" alt="adafruit_products_image.png">
+<span class="image-expand"><i class="fa fa-search-plus"></i></span>
+</a> </div>
+<div class="row-fluid text-element">
+<p class="p2"><span class="s1">Now you're ready to read values from the sensor using these properties:</span></p>
+<ul class="ul1">
+<li class="li5">
+<span class="s1"><strong><span class="pl-en"><span class="pl-token">data_available</span></span></strong> - <span class="pl-s">Check the sensor to see if new data is available</span>.</span><span class="s1"></span><span class="s1"></span>
+</li>
+<li class="li5"><span class="s1"><strong><span class="pl-en"><span class="pl-token">eCO2</span></span></strong> - <span class="pl-s">The CO2 concentration in PPM (parts per million).</span><br></span></li>
+<li class="li5"><span class="s1"><strong><span class="pl-en"><span class="pl-token">temperature</span></span></strong> - <span class="pl-s">The current temperature in degrees Celsius.</span><br></span></li>
+<li class="li5"><span class="s1"><strong><span class="pl-en"><span class="pl-token">relative_humidity</span></span></strong> - <span class="pl-s">The current relative humidity in %rH.</span><br></span></li>
+</ul>
+</div>
+<div class="code-element" aria-label="Code element">
+<div class="download-code
+    ">
+<a data-turbo="false" class="download-button" href="https://learn.adafruit.com/pages/21351/elements/3081062/download">
+<i class="fa fa-cloud"></i> Download File
+</a> <div class="code-copy-container">
+<a href="https://learn.adafruit.com/adafruit-scd30?view=all#" class="code-copy-button"><i class="fa fa-clipboard"></i> Copy Code</a>
+</div>
+</div>
+<pre class="code-text-only" style="display: none;">print("Data available?", scd.data_available)
+print("CO2:", scd.CO2, "PPM")
+print("Temperature:", scd.temperature, "degrees C")
+print("Humidity:", scd.relative_humidity, "%%rH")</pre>
+<pre class="prettyprint language-python hljs"><span class="hljs-built_in">print</span>(<span class="hljs-string">"Data available?"</span>, scd.data_available)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">"CO2:"</span>, scd.CO2, <span class="hljs-string">"PPM"</span>)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">"Temperature:"</span>, scd.temperature, <span class="hljs-string">"degrees C"</span>)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">"Humidity:"</span>, scd.relative_humidity, <span class="hljs-string">"%%rH"</span>)</pre>
+</div>
+<div class="row-fluid image-element" aria-label="Image: adafruit_products_image.png">
+<a href="https://learn.adafruit.com/assets/98497">
+<img class="98497-asset img-responsive" srcset="https://cdn-learn.adafruit.com/assets/assets/000/098/497/medium260/adafruit_products_image.png?1609957281 260w,
+               https://cdn-learn.adafruit.com/assets/assets/000/098/497/medium640/adafruit_products_image.png?1609957281 640w,
+               https://cdn-learn.adafruit.com/assets/assets/000/098/497/medium800/adafruit_products_image.png?1609957281 800w,
+               https://cdn-learn.adafruit.com/assets/assets/000/098/497/large1024/adafruit_products_image.png?1609957281 1024w" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 65vw, (max-width: 1365px) 47vw, 750px" src="./Overview _ Adafruit SCD-30 - NDIR CO2 Temperature and Humidity Sensor _ Adafruit Learning System_files/adafruit_products_image(2).png" alt="adafruit_products_image.png">
+<span class="image-expand"><i class="fa fa-search-plus"></i></span>
+</a> </div>
+<div class="row-fluid text-element">
+<h1>
+<div class="anchor-anchor">
+<a href="https://learn.adafruit.com/adafruit-scd30?view=all#full-example-code-3081063" class="anchor-link"><span class="fa fa-link"></span></a><span id="full-example-code-3081063" class="anchor-link-target"></span>
+</div>Full Example Code</h1>
+</div>
+<div class="code-element" aria-label="Code element">
+<div class="download-code
+    ">
+<a data-turbo="false" class="download-button" href="https://learn.adafruit.com/pages/21351/elements/3081064/download?type=zip">
+<i class="fa fa-cloud"></i> Download Project Bundle
+</a> <div class="code-copy-container">
+<a href="https://learn.adafruit.com/adafruit-scd30?view=all#" class="code-copy-button"><i class="fa fa-clipboard"></i> Copy Code</a>
+</div>
+</div>
+<pre class="code-text-only" style="display: none;"># SPDX-FileCopyrightText: 2020 by Bryan Siepert, written for Adafruit Industries
+#
+# SPDX-License-Identifier: Unlicense
+import time
+import board
+import busio
+import adafruit_scd30
+
+# SCD-30 has tempremental I2C with clock stretching, datasheet recommends
+# starting at 50KHz
+i2c = busio.I2C(board.SCL, board.SDA, frequency=50000)
+scd = adafruit_scd30.SCD30(i2c)
+
+while True:
+    # since the measurement interval is long (2+ seconds) we check for new data before reading
+    # the values, to ensure current readings.
+    if scd.data_available:
+        print("Data Available!")
+        print("CO2: %d PPM" % scd.CO2)
+        print("Temperature: %0.2f degrees C" % scd.temperature)
+        print("Humidity: %0.2f %% rH" % scd.relative_humidity)
+        print("")
+        print("Waiting for new data...")
+        print("")
+
+    time.sleep(0.5)
+</pre>
+<pre class="prettyprint embed hljs language-python"><span class="hljs-comment"># SPDX-FileCopyrightText: 2020 by Bryan Siepert, written for Adafruit Industries</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment"># SPDX-License-Identifier: Unlicense</span>
+<span class="hljs-keyword">import</span> time
+<span class="hljs-keyword">import</span> board
+<span class="hljs-keyword">import</span> busio
+<span class="hljs-keyword">import</span> adafruit_scd30
+
+<span class="hljs-comment"># SCD-30 has tempremental I2C with clock stretching, datasheet recommends</span>
+<span class="hljs-comment"># starting at 50KHz</span>
+i2c = busio.I2C(board.SCL, board.SDA, frequency=<span class="hljs-number">50000</span>)
+scd = adafruit_scd30.SCD30(i2c)
+
+<span class="hljs-keyword">while</span> <span class="hljs-literal">True</span>:
+    <span class="hljs-comment"># since the measurement interval is long (2+ seconds) we check for new data before reading</span>
+    <span class="hljs-comment"># the values, to ensure current readings.</span>
+    <span class="hljs-keyword">if</span> scd.data_available:
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">"Data Available!"</span>)
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">"CO2: %d PPM"</span> % scd.CO2)
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">"Temperature: %0.2f degrees C"</span> % scd.temperature)
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">"Humidity: %0.2f %% rH"</span> % scd.relative_humidity)
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">""</span>)
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">"Waiting for new data..."</span>)
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">""</span>)
+
+    time.sleep(<span class="hljs-number">0.5</span>)
+</pre>
+<div class="code-element-footer">
+<a target="_blank" rel="noopener noreferrer" href="https://github.com/adafruit/Adafruit_CircuitPython_SCD30/blob/main/examples/scd30_simpletest.py">
+<i class="fa fa-github"></i>
+View on GitHub
+</a> </div>
+</div>
+<div class="row-fluid text-element">
+<p>You'll be able to get a new reading every 2 seconds, that's as fast as data comes out of the sensor.</p>
+<p>It's normal for the first reading to be 0, as the sensor 'warms up'. Simply skip that reading when logging data.</p>
+</div>
+<div class="row-fluid image-element" aria-label="Image: adafruit_products_image.png">
+<a href="https://learn.adafruit.com/assets/98498">
+<img class="98498-asset img-responsive" srcset="https://cdn-learn.adafruit.com/assets/assets/000/098/498/medium260/adafruit_products_image.png?1609957348 260w,
+               https://cdn-learn.adafruit.com/assets/assets/000/098/498/medium640/adafruit_products_image.png?1609957348 640w,
+               https://cdn-learn.adafruit.com/assets/assets/000/098/498/medium800/adafruit_products_image.png?1609957348 800w,
+               https://cdn-learn.adafruit.com/assets/assets/000/098/498/large1024/adafruit_products_image.png?1609957348 1024w" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 65vw, (max-width: 1365px) 47vw, 750px" src="./Overview _ Adafruit SCD-30 - NDIR CO2 Temperature and Humidity Sensor _ Adafruit Learning System_files/adafruit_products_image(3).png" alt="adafruit_products_image.png">
+<span class="image-expand"><i class="fa fa-search-plus"></i></span>
+</a> </div>
+<div class="row-fluid text-element">
+<p>To change things like the interval delay (how often data is calculated)&nbsp; check out this example which shows how you can tweak the sensor to change the interval, or tune the sensor with things like the known altitude/barometric pressure. Check the datasheet for the SCD-30 for more details on tuning the sensor.</p>
+</div>
+<div class="code-element" aria-label="Code element">
+<div class="download-code
+    ">
+<a data-turbo="false" class="download-button" href="https://learn.adafruit.com/pages/21351/elements/3081112/download?type=zip">
+<i class="fa fa-cloud"></i> Download Project Bundle
+</a> <div class="code-copy-container">
+<a href="https://learn.adafruit.com/adafruit-scd30?view=all#" class="code-copy-button"><i class="fa fa-clipboard"></i> Copy Code</a>
+</div>
+</div>
+<pre class="code-text-only" style="display: none;"># SPDX-FileCopyrightText: 2020 by Bryan Siepert, written for Adafruit Industries
+#
+# SPDX-License-Identifier: Unlicense
+import time
+import board
+import busio
+import adafruit_scd30
+
+# SCD-30 has tempremental I2C with clock stretching, datasheet recommends
+# starting at 50KHz
+i2c = busio.I2C(board.SCL, board.SDA, frequency=50000)
+scd = adafruit_scd30.SCD30(i2c)
+# scd.temperature_offset = 10
+print("Temperature offset:", scd.temperature_offset)
+
+# scd.measurement_interval = 4
+print("Measurement interval:", scd.measurement_interval)
+
+# scd.self_calibration_enabled = True
+print("Self-calibration enabled:", scd.self_calibration_enabled)
+
+# scd.ambient_pressure = 1100
+print("Ambient Pressure:", scd.ambient_pressure)
+
+# scd.altitude = 100
+print("Altitude:", scd.altitude, "meters above sea level")
+
+# scd.forced_recalibration_reference = 409
+print("Forced recalibration reference:", scd.forced_recalibration_reference)
+print("")
+
+while True:
+    data = scd.data_available
+    if data:
+        print("Data Available!")
+        print("CO2:", scd.CO2, "PPM")
+        print("Temperature:", scd.temperature, "degrees C")
+        print("Humidity::", scd.relative_humidity, "%%rH")
+        print("")
+        print("Waiting for new data...")
+        print("")
+
+    time.sleep(0.5)
+</pre>
+<pre class="prettyprint embed hljs language-python"><span class="hljs-comment"># SPDX-FileCopyrightText: 2020 by Bryan Siepert, written for Adafruit Industries</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment"># SPDX-License-Identifier: Unlicense</span>
+<span class="hljs-keyword">import</span> time
+<span class="hljs-keyword">import</span> board
+<span class="hljs-keyword">import</span> busio
+<span class="hljs-keyword">import</span> adafruit_scd30
+
+<span class="hljs-comment"># SCD-30 has tempremental I2C with clock stretching, datasheet recommends</span>
+<span class="hljs-comment"># starting at 50KHz</span>
+i2c = busio.I2C(board.SCL, board.SDA, frequency=<span class="hljs-number">50000</span>)
+scd = adafruit_scd30.SCD30(i2c)
+<span class="hljs-comment"># scd.temperature_offset = 10</span>
+<span class="hljs-built_in">print</span>(<span class="hljs-string">"Temperature offset:"</span>, scd.temperature_offset)
+
+<span class="hljs-comment"># scd.measurement_interval = 4</span>
+<span class="hljs-built_in">print</span>(<span class="hljs-string">"Measurement interval:"</span>, scd.measurement_interval)
+
+<span class="hljs-comment"># scd.self_calibration_enabled = True</span>
+<span class="hljs-built_in">print</span>(<span class="hljs-string">"Self-calibration enabled:"</span>, scd.self_calibration_enabled)
+
+<span class="hljs-comment"># scd.ambient_pressure = 1100</span>
+<span class="hljs-built_in">print</span>(<span class="hljs-string">"Ambient Pressure:"</span>, scd.ambient_pressure)
+
+<span class="hljs-comment"># scd.altitude = 100</span>
+<span class="hljs-built_in">print</span>(<span class="hljs-string">"Altitude:"</span>, scd.altitude, <span class="hljs-string">"meters above sea level"</span>)
+
+<span class="hljs-comment"># scd.forced_recalibration_reference = 409</span>
+<span class="hljs-built_in">print</span>(<span class="hljs-string">"Forced recalibration reference:"</span>, scd.forced_recalibration_reference)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">""</span>)
+
+<span class="hljs-keyword">while</span> <span class="hljs-literal">True</span>:
+    data = scd.data_available
+    <span class="hljs-keyword">if</span> data:
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">"Data Available!"</span>)
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">"CO2:"</span>, scd.CO2, <span class="hljs-string">"PPM"</span>)
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">"Temperature:"</span>, scd.temperature, <span class="hljs-string">"degrees C"</span>)
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">"Humidity::"</span>, scd.relative_humidity, <span class="hljs-string">"%%rH"</span>)
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">""</span>)
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">"Waiting for new data..."</span>)
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">""</span>)
+
+    time.sleep(<span class="hljs-number">0.5</span>)
+</pre>
+<div class="code-element-footer">
+<a target="_blank" rel="noopener noreferrer" href="https://github.com/adafruit/Adafruit_CircuitPython_SCD30/blob/main/examples/scd30_tuning_knobs.py">
+<i class="fa fa-github"></i>
+View on GitHub
+</a> </div>
+</div>
+</div>
+</div>
+<div class="page-header-wrapper">
+<h2 class="headline" aria-label="Page title">
+<span id="wippersnapper">WipperSnapper</span>
+</h2>
+<div class="badges">
+</div>
+</div>
+<div class="page-content">
+<div class="" role="region" aria-label="Page content">
+<div class="row-fluid text-element">
+<h2>
+<div class="anchor-anchor">
+<a href="https://learn.adafruit.com/adafruit-scd30?view=all#what-is-wippersnapper-3112746" class="anchor-link"><span class="fa fa-link"></span></a><span id="what-is-wippersnapper-3112746" class="anchor-link-target"></span>
+</div>What is WipperSnapper</h2>
+<p>WipperSnapper is a firmware designed to turn any WiFi-capable board into an Internet-of-Things device without programming a single line of code. WipperSnapper connects to <a href="https://io.adafruit.com/">Adafruit IO</a>, a web&nbsp;platform designed (<a href="https://www.adafruit.com/about">by Adafruit!</a>) to<span>&nbsp;</span><em>display</em>,<span>&nbsp;</span><em>respond</em>, and<span>&nbsp;</span><em>interact</em><span>&nbsp;</span>with your project's data.</p>
+<p><span>Simply load the WipperSnapper firmware onto your board, add credentials, and plug it into power. Your board will automatically register itself with your Adafruit IO account.</span></p>
+<p><span>From there, you can add&nbsp;<em>components</em>&nbsp;to your board such as buttons, switches, potentiometers, sensors, and more! Components are&nbsp;<em>dynamically&nbsp;</em>added to hardware, so you can</span><span>&nbsp;immediately start interacting, logging, and streaming the data your projects produce without writing code.</span></p>
+<p>If you've never used WipperSnapper, click below to read through the quick start guide before continuing.</p>
+</div>
+<div id="element-3112753" class="button-element" data-github-release="" aria-label="Button Quickstart: Adafruit IO WipperSnapper">
+<a href="https://learn.adafruit.com/quickstart-adafruit-io-wippersnapper" class="btn btn-large btn-block btn-primary" target="_blank" rel="noopener noreferrer" data-zip-folder="">Quickstart: Adafruit IO WipperSnapper</a>
+</div>
+<div class="row-fluid text-element">
+<h2>
+<div class="anchor-anchor">
+<a href="https://learn.adafruit.com/adafruit-scd30?view=all#wiring-3112744" class="anchor-link"><span class="fa fa-link"></span></a><span id="wiring-3112744" class="anchor-link-target"></span>
+</div>Wiring</h2>
+</div>
+<div class="row-fluid text-element">
+<p>First, wire up a SCD30 to your board exactly as follows. Here is an example of the SCD30 wired to an<span>&nbsp;</span><a href="https://www.adafruit.com/product/5400">Adafruit ESP32 Feather V2</a><span>&nbsp;</span>using I2C<span>&nbsp;</span><a href="https://www.adafruit.com/product/4210">with a STEMMA QT cable (no soldering required)</a></p>
+</div>
+<div class="side-element">
+<div class="side-images">
+<div class="anchor-anchor">
+<a href="https://learn.adafruit.com/adafruit-scd30?view=all#step-3122744" class="anchor-link"><span class="fa fa-link"></span></a>
+</div>
+<span id="step-3122744" class="anchor-link-target"></span>
+<ul>
+<li class="medium-side">
+<a class="large-side-image-link" href="https://learn.adafruit.com/assets/113707">
+<img class="113707-asset medium-side-image img-responsive" src="./Overview _ Adafruit SCD-30 - NDIR CO2 Temperature and Humidity Sensor _ Adafruit Learning System_files/adafruit_products_scd30-2.png" alt="adafruit_products_scd30-2.png">
+</a></li>
+<li class="small-side">
+<a class="medium-side-image-link" href="https://learn.adafruit.com/assets/113707">
+<img class="113707-asset small-side-image img-responsive" src="./Overview _ Adafruit SCD-30 - NDIR CO2 Temperature and Humidity Sensor _ Adafruit Learning System_files/adafruit_products_scd30-2(1).png" alt="adafruit_products_scd30-2.png">
+</a> </li>
+<li class="small-side">
+<a class="medium-side-image-link" href="https://learn.adafruit.com/assets/113708">
+<img class="113708-asset small-side-image img-responsive" src="./Overview _ Adafruit SCD-30 - NDIR CO2 Temperature and Humidity Sensor _ Adafruit Learning System_files/adafruit_products_scd30-1.png" alt="adafruit_products_scd30-1.png">
+</a> </li>
+</ul>
+</div>
+<div class="side-text"><div class="text">
+<ul>
+<li>
+<strong>Board 3V</strong>&nbsp;to&nbsp;<strong>sensor VIN (red wire on STEMMA QT)<br></strong>
+</li>
+<li>
+<strong>Board GND</strong>&nbsp;to&nbsp;<strong>sensor GND (black wire on STEMMA QT)<br></strong>
+</li>
+<li>
+<strong>Board SCL</strong>&nbsp;to&nbsp;<strong>sensor SCL (yellow wire on STEMMA QT)<br></strong>
+</li>
+<li>
+<strong>Board SDA</strong>&nbsp;to&nbsp;<strong>sensor SDA (blue wire on STEMMA QT)</strong>
+</li>
+</ul>
+</div></div>
+</div>
+<div class="row-fluid text-element">
+<h2>
+<div class="anchor-anchor">
+<a href="https://learn.adafruit.com/adafruit-scd30?view=all#usage-3112747" class="anchor-link"><span class="fa fa-link"></span></a><span id="usage-3112747" class="anchor-link-target"></span>
+</div>Usage</h2>
+<p>Connect your board to Adafruit IO Wippersnapper and <strong><a href="https://io.adafruit.com/wippersnapper">navigate to the WipperSnapper board list</a>.</strong></p>
+<p>On this page, <strong>select the WipperSnapper board you're using</strong> to be brought to the board's interface page.</p>
+</div>
+<div class="row-fluid image-element" aria-label="Image: wippersnapper_IO_-_WipperSnapper_-_board_-_list.png">
+<a href="https://learn.adafruit.com/assets/109772">
+<img class="109772-asset img-responsive" srcset="https://cdn-learn.adafruit.com/assets/assets/000/109/772/medium260/wippersnapper_IO_-_WipperSnapper_-_board_-_list.png?1647465364 260w,
+               https://cdn-learn.adafruit.com/assets/assets/000/109/772/medium640/wippersnapper_IO_-_WipperSnapper_-_board_-_list.png?1647465364 640w,
+               https://cdn-learn.adafruit.com/assets/assets/000/109/772/medium800/wippersnapper_IO_-_WipperSnapper_-_board_-_list.png?1647465364 800w,
+               https://cdn-learn.adafruit.com/assets/assets/000/109/772/large1024/wippersnapper_IO_-_WipperSnapper_-_board_-_list.png?1647465364 1024w" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 65vw, (max-width: 1365px) 47vw, 750px" src="./Overview _ Adafruit SCD-30 - NDIR CO2 Temperature and Humidity Sensor _ Adafruit Learning System_files/wippersnapper_IO_-_WipperSnapper_-_board_-_list.png" alt="wippersnapper_IO_-_WipperSnapper_-_board_-_list.png">
+<span class="image-expand"><i class="fa fa-search-plus"></i></span>
+</a> </div>
+<div class="row-fluid text-element">
+<p>If you do not see your board listed here - you need <a href="https://learn.adafruit.com/quickstart-adafruit-io-wippersnapper">to connect your board to Adafruit IO</a> first.</p>
+</div>
+<div class="side-element">
+<div class="side-images">
+<div class="anchor-anchor">
+<a href="https://learn.adafruit.com/adafruit-scd30?view=all#step-3112759" class="anchor-link"><span class="fa fa-link"></span></a>
+</div>
+<span id="step-3112759" class="anchor-link-target"></span>
+<ul>
+<li class="medium-side">
+<a class="large-side-image-link" href="https://learn.adafruit.com/assets/114510">
+<img class="114510-asset medium-side-image img-responsive" src="./Overview _ Adafruit SCD-30 - NDIR CO2 Temperature and Humidity Sensor _ Adafruit Learning System_files/sensor_page_ksnip_20220826-151749.png" alt="sensor_page_ksnip_20220826-151749.png">
+</a></li>
+</ul>
+</div>
+<div class="side-text"><div class="text">
+<p>On the device page, quickly <strong>check that you're running the latest version of the WipperSnapper firmware</strong>.</p>
+<p>The device tile on the left indicates the version number of the firmware running on the connected board.</p>
+<ul>
+<li>
+<strong>If the firmware version is green with a checkmark -</strong><span>&nbsp;</span>continue with this guide.</li>
+<li>
+<strong>If the firmware version is red with an "X" -</strong><span>&nbsp;</span><a href="https://learn.adafruit.com/quickstart-adafruit-io-wippersnapper">update to the latest WipperSnapper firmware</a><span>&nbsp;</span>on your board before continuing.</li>
+</ul>
+</div></div>
+</div>
+<div class="row-fluid text-element">
+<p>Next, make sure the sensor is plugged into your board and click the <strong>Start I2C Scan&nbsp;</strong>button.</p>
+</div>
+<div class="row-fluid image-element" aria-label="Image: sensor_page_crop_scan.png">
+<a href="https://learn.adafruit.com/assets/113177">
+<img class="113177-asset img-responsive" srcset="https://cdn-learn.adafruit.com/assets/assets/000/113/177/medium260/sensor_page_crop_scan.png?1657724520 260w,
+               https://cdn-learn.adafruit.com/assets/assets/000/113/177/medium640/sensor_page_crop_scan.png?1657724520 640w,
+               https://cdn-learn.adafruit.com/assets/assets/000/113/177/medium800/sensor_page_crop_scan.png?1657724520 800w,
+               https://cdn-learn.adafruit.com/assets/assets/000/113/177/large1024/sensor_page_crop_scan.png?1657724520 1024w" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 65vw, (max-width: 1365px) 47vw, 750px" src="./Overview _ Adafruit SCD-30 - NDIR CO2 Temperature and Humidity Sensor _ Adafruit Learning System_files/sensor_page_crop_scan.png" alt="sensor_page_crop_scan.png">
+<span class="image-expand"><i class="fa fa-search-plus"></i></span>
+</a> </div>
+<div class="row-fluid text-element">
+<p>You should see the SCD30's default I2C address of <code>0x61</code><span>&nbsp;</span>pop up in the I2C scan list.</p>
+</div>
+<div class="row-fluid image-element" aria-label="Image: adafruit_products_ksnip_20220728-141115.png">
+<a href="https://learn.adafruit.com/assets/113709">
+<img class="113709-asset img-responsive" srcset="https://cdn-learn.adafruit.com/assets/assets/000/113/709/medium260/adafruit_products_ksnip_20220728-141115.png?1659032801 260w,
+               https://cdn-learn.adafruit.com/assets/assets/000/113/709/medium640/adafruit_products_ksnip_20220728-141115.png?1659032801 640w,
+               https://cdn-learn.adafruit.com/assets/assets/000/113/709/medium800/adafruit_products_ksnip_20220728-141115.png?1659032801 800w,
+               https://cdn-learn.adafruit.com/assets/assets/000/113/709/large1024/adafruit_products_ksnip_20220728-141115.png?1659032801 1024w" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 65vw, (max-width: 1365px) 47vw, 750px" src="./Overview _ Adafruit SCD-30 - NDIR CO2 Temperature and Humidity Sensor _ Adafruit Learning System_files/adafruit_products_ksnip_20220728-141115.png" alt="adafruit_products_ksnip_20220728-141115.png">
+<span class="image-expand"><i class="fa fa-search-plus"></i></span>
+</a> </div>
+<div class="faq-element last" aria-label="Collapsible prompt ">
+<div class="faq-anchor-anchor">
+<a href="https://learn.adafruit.com/adafruit-scd30?view=all#faq-3112810" class="anchor-link"><span class="fa fa-link"></span></a>
+<span id="faq-3112810" class="anchor-link-target"></span>
+</div>
+<div class="collapsible-content">
+<div class="question">
+<div class="text"><i class="fa fa-question-circle-o"></i> <span> I don't see the sensor's I2C address listed!
+</span></div>
+<div class="collapsible-icon">
+<i class="collapsed-icon"></i>
+</div>
+</div>
+<div class="answer"><p>First, double-check the connection and/or wiring between the sensor and the board.</p>
+<p>Then, reset the board and let it re-connect to Adafruit IO WipperSnapper.</p></div>
+</div>
+</div>
+<div class="row-fluid text-element">
+<p>With the sensor detected in an I2C scan, we're ready to add the sensor to your board.</p>
+<p><strong>Click the New Component button or the + button </strong>to bring up the component picker.</p>
+</div>
+<div class="row-fluid image-element" aria-label="Image: sensor_page_new_comp.png">
+<a href="https://learn.adafruit.com/assets/112614">
+<img class="112614-asset img-responsive" srcset="https://cdn-learn.adafruit.com/assets/assets/000/112/614/medium260/sensor_page_new_comp.png?1656103650 260w,
+               https://cdn-learn.adafruit.com/assets/assets/000/112/614/medium640/sensor_page_new_comp.png?1656103650 640w,
+               https://cdn-learn.adafruit.com/assets/assets/000/112/614/medium800/sensor_page_new_comp.png?1656103650 800w,
+               https://cdn-learn.adafruit.com/assets/assets/000/112/614/large1024/sensor_page_new_comp.png?1656103650 1024w" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 65vw, (max-width: 1365px) 47vw, 750px" src="./Overview _ Adafruit SCD-30 - NDIR CO2 Temperature and Humidity Sensor _ Adafruit Learning System_files/sensor_page_new_comp.png" alt="sensor_page_new_comp.png">
+<span class="image-expand"><i class="fa fa-search-plus"></i></span>
+</a> </div>
+<div class="row-fluid image-element" aria-label="Image: adafruit_products_ksnip_20220728-141137.png">
+<a href="https://learn.adafruit.com/assets/113710">
+<img class="113710-asset img-responsive" srcset="https://cdn-learn.adafruit.com/assets/assets/000/113/710/medium260/adafruit_products_ksnip_20220728-141137.png?1659032827 260w,
+               https://cdn-learn.adafruit.com/assets/assets/000/113/710/medium640/adafruit_products_ksnip_20220728-141137.png?1659032827 640w,
+               https://cdn-learn.adafruit.com/assets/assets/000/113/710/medium800/adafruit_products_ksnip_20220728-141137.png?1659032827 800w,
+               https://cdn-learn.adafruit.com/assets/assets/000/113/710/large1024/adafruit_products_ksnip_20220728-141137.png?1659032827 1024w" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 65vw, (max-width: 1365px) 47vw, 750px" src="./Overview _ Adafruit SCD-30 - NDIR CO2 Temperature and Humidity Sensor _ Adafruit Learning System_files/adafruit_products_ksnip_20220728-141137.png" alt="adafruit_products_ksnip_20220728-141137.png">
+<span class="image-expand"><i class="fa fa-search-plus"></i></span>
+</a> </div>
+<div class="row-fluid text-element">
+<p>On the component configuration page, the SCD30's sensor address should be listed along with the sensor's settings.</p>
+<p>The<span>&nbsp;</span><strong>Send Every</strong><span>&nbsp;</span>option is specific to each sensor's measurements. This option will tell the Feather how often it should read from each of the SCD30's three sensors and send the data to Adafruit IO. Measurements can range from every 30 seconds to every 24 hours.</p>
+<p>For this example, set the<span>&nbsp;</span><strong>Send Every&nbsp;</strong>interval for each sensor to every 30 seconds.</p>
+</div>
+<div class="row-fluid image-element" aria-label="Image: adafruit_products_ksnip_20220728-141217.png">
+<a href="https://learn.adafruit.com/assets/113711">
+<img class="113711-asset img-responsive" srcset="https://cdn-learn.adafruit.com/assets/assets/000/113/711/medium260/adafruit_products_ksnip_20220728-141217.png?1659032867 260w,
+               https://cdn-learn.adafruit.com/assets/assets/000/113/711/medium640/adafruit_products_ksnip_20220728-141217.png?1659032867 640w,
+               https://cdn-learn.adafruit.com/assets/assets/000/113/711/medium800/adafruit_products_ksnip_20220728-141217.png?1659032867 800w,
+               https://cdn-learn.adafruit.com/assets/assets/000/113/711/large1024/adafruit_products_ksnip_20220728-141217.png?1659032867 1024w" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 65vw, (max-width: 1365px) 47vw, 750px" src="./Overview _ Adafruit SCD-30 - NDIR CO2 Temperature and Humidity Sensor _ Adafruit Learning System_files/adafruit_products_ksnip_20220728-141217.png" alt="adafruit_products_ksnip_20220728-141217.png">
+<span class="image-expand"><i class="fa fa-search-plus"></i></span>
+</a> </div>
+<div class="row-fluid text-element">
+<p>Your device interface should now show the sensor components you created. After the interval you configured elapses, WipperSnapper will automatically read values from the sensor(s) and send them to Adafruit IO.</p>
+</div>
+<div class="row-fluid image-element" aria-label="Image: adafruit_products_ezgif.com-gif-maker_(4).gif">
+<a href="https://learn.adafruit.com/assets/113712">
+<video class="img img-responsive" preload="auto" muted="muted" loop="loop" autoplay="autoplay" playsinline="" poster="https://cdn-learn.adafruit.com/assets/assets/000/113/712/medium800thumb/adafruit_products_ezgif.com-gif-maker_%284%29.jpg?1659032897">
+<source src="https://cdn-learn.adafruit.com/assets/assets/000/113/712/large1024mp4/adafruit_products_ezgif.com-gif-maker_%284%29.mp4?1659032897">
+<source src="https://cdn-learn.adafruit.com/assets/assets/000/113/712/large1024webm/adafruit_products_ezgif.com-gif-maker_%284%29.webm?1659032897" type="video/webm; codecs=vp8,vorbis">
+<source src="https://cdn-learn.adafruit.com/assets/assets/000/113/712/large1024ogv/adafruit_products_ezgif.com-gif-maker_%284%29.ogv?1659032897" type="video/ogg; codecs=theora,vorbis">
+Your browser does not support the video tag.
+</video>
+<span class="image-expand"><i class="fa fa-search-plus"></i></span>
+</a> </div>
+<div class="row-fluid text-element">
+<p>To view the data that has been logged from the sensor, click on the graph next to the sensor name.</p>
+</div>
+<div class="row-fluid image-element" aria-label="Image: adafruit_products_ksnip_20220728-141729.png">
+<a href="https://learn.adafruit.com/assets/113713">
+<img class="113713-asset img-responsive" srcset="https://cdn-learn.adafruit.com/assets/assets/000/113/713/medium260/adafruit_products_ksnip_20220728-141729.png?1659032910 260w,
+               https://cdn-learn.adafruit.com/assets/assets/000/113/713/medium640/adafruit_products_ksnip_20220728-141729.png?1659032910 640w,
+               https://cdn-learn.adafruit.com/assets/assets/000/113/713/medium800/adafruit_products_ksnip_20220728-141729.png?1659032910 800w,
+               https://cdn-learn.adafruit.com/assets/assets/000/113/713/large1024/adafruit_products_ksnip_20220728-141729.png?1659032910 1024w" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 65vw, (max-width: 1365px) 47vw, 750px" src="./Overview _ Adafruit SCD-30 - NDIR CO2 Temperature and Humidity Sensor _ Adafruit Learning System_files/adafruit_products_ksnip_20220728-141729.png" alt="adafruit_products_ksnip_20220728-141729.png">
+<span class="image-expand"><i class="fa fa-search-plus"></i></span>
+</a> </div>
+<div class="row-fluid text-element">
+<p>Here you can see the feed history and edit things about the feed such as the name, privacy, webhooks associated with the feed and more. If you want to learn more about how feeds work, <a href="https://learn.adafruit.com/all-the-internet-of-things-episode-four-adafruit-io/advanced-feeds" target="_blank">check out this page</a>.</p>
+</div>
+<div class="row-fluid text-element">
+<p><span>The SCD30 has three sensors that each have their own feeds. In this picture, we're looking at the CO2 sensor, but if you click on the graph icon for the different sensors you'll see their feed history.</span></p>
+</div>
+<div class="row-fluid image-element" aria-label="Image: adafruit_products_ksnip_20220728-142933.png">
+<a href="https://learn.adafruit.com/assets/113714">
+<img class="113714-asset img-responsive" srcset="https://cdn-learn.adafruit.com/assets/assets/000/113/714/medium260/adafruit_products_ksnip_20220728-142933.png?1659032984 260w,
+               https://cdn-learn.adafruit.com/assets/assets/000/113/714/medium640/adafruit_products_ksnip_20220728-142933.png?1659032984 640w,
+               https://cdn-learn.adafruit.com/assets/assets/000/113/714/medium800/adafruit_products_ksnip_20220728-142933.png?1659032984 800w,
+               https://cdn-learn.adafruit.com/assets/assets/000/113/714/large1024/adafruit_products_ksnip_20220728-142933.png?1659032984 1024w" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 65vw, (max-width: 1365px) 47vw, 750px" src="./Overview _ Adafruit SCD-30 - NDIR CO2 Temperature and Humidity Sensor _ Adafruit Learning System_files/adafruit_products_ksnip_20220728-142933.png" alt="adafruit_products_ksnip_20220728-142933.png">
+<span class="image-expand"><i class="fa fa-search-plus"></i></span>
+</a> </div>
+<div class="row-fluid text-element">
+<p><span>For IO Free accounts, feed data is stored for a maximum of 30 days and there's a maximum of 10 feeds. In this guide, you created three feeds (one for each of the SCD30's sensors). If you’d like to store data for more than 30 days, increase the number of feeds (components) you can use with WipperSnapper, or increase your data rate to send more sensor measurements to Adafruit IO - </span><a href="https://io.adafruit.com/plus" target="_blank">upgrade your account to Adafruit IO Plus</a><span>.</span></p>
+</div>
+</div>
+</div>
+<div class="page-header-wrapper">
+<h2 class="headline" aria-label="Page title">
+<span id="field-calibration">Field Calibration</span>
+</h2>
+<div class="badges">
+</div>
+</div>
+<div class="page-content">
+<div class="" role="region" aria-label="Page content">
+<div class="row-fluid text-element">
+<p>Performing a re-calibration of the SCD-30 can help maintain accurate CO2 readings over time. Various factors can cause the SCD-30 sensor reading to drift and there are two available re-calibration options: <strong>Forced Re-Calibration</strong> (FRC) and <strong>Automatic Self-Calibration</strong> (ASC).</p>
+<p>This Application Note from <a href="https://www.sensirion.com/">Sensirion</a> goes into lots of detail and is <strong>worth reading</strong>:</p>
+</div>
+<div id="element-3083996" class="button-element" data-github-release="" aria-label="Button Field calibration for SCD30">
+<a href="https://www.sensirion.com/fileadmin/user_upload/customers/sensirion/Dokumente/9.5_CO2/Sensirion_CO2_Sensors_SCD30_Field_Calibration.pdf" class="btn btn-large btn-block btn-info" target="_blank" rel="noopener noreferrer" data-zip-folder="">Field calibration for SCD30</a>
+</div>
+<div class="row-fluid text-element">
+<p>Here we summarizes the two approaches.</p>
+</div>
+<div class="row-fluid text-element">
+
+<h2>
+<div class="anchor-anchor">
+<a href="https://learn.adafruit.com/adafruit-scd30?view=all#forced-re-calibration-3084000" class="anchor-link"><span class="fa fa-link"></span></a><span id="forced-re-calibration-3084000" class="anchor-link-target"></span>
+</div>Forced Re-Calibration</h2>
+<p>This is the easiest approach. The SCD-30 is placed in an environment with a known CO2 concentration. Then the FRC routine is called and this known concentration value (in ppm) is supplied. But how do you come up with that known value? That is a caveat of this approach and Sensirion (see PDF linked above) suggests three approaches:</p>
+<ol>
+<li>Using a separate secondary calibrated CO2 sensor to provide the value.</li>
+<li>Exposing the SCD-30 to a controlled environment with a known value.</li>
+<li>Exposing the SCD-30 to fresh outside air and using a value of 400 ppm.</li>
+</ol>
+</div>
+<div class="row-fluid text-element">
+<p>However, once you have your reference value, performing a FRC is super easy. Assuming a reference CO2 concentration of 800 ppm has been determined, then with the <strong>CircuitPython</strong> library use:</p>
+</div>
+<div class="code-element" aria-label="Code element">
+<div class="download-code
+    ">
+<a data-turbo="false" class="download-button" href="https://learn.adafruit.com/pages/21663/elements/3084001/download">
+<i class="fa fa-cloud"></i> Download File
+</a> <div class="code-copy-container">
+<a href="https://learn.adafruit.com/adafruit-scd30?view=all#" class="code-copy-button"><i class="fa fa-clipboard"></i> Copy Code</a>
+</div>
+</div>
+<pre class="code-text-only" style="display: none;">scd30.forced_recalibration_reference = 800</pre>
+<pre class="prettyprint language-python hljs">scd30.forced_recalibration_reference = <span class="hljs-number">800</span></pre>
+</div>
+<div class="row-fluid text-element">
+<p>or with the <strong>Arduino</strong> library use:</p>
+</div>
+<div class="code-element" aria-label="Code element">
+<div class="download-code
+    ">
+<a data-turbo="false" class="download-button" href="https://learn.adafruit.com/pages/21663/elements/3084003/download">
+<i class="fa fa-cloud"></i> Download File
+</a> <div class="code-copy-container">
+<a href="https://learn.adafruit.com/adafruit-scd30?view=all#" class="code-copy-button"><i class="fa fa-clipboard"></i> Copy Code</a>
+</div>
+</div>
+<pre class="code-text-only" style="display: none;">scd30.forceRecalibrationWithReference(800);</pre>
+<pre class="prettyprint language-cpp hljs">scd30.forceRecalibrationWithReference(<span class="hljs-number">800</span>);</pre>
+</div>
+<div class="row-fluid text-element">
+<h2>
+<div class="anchor-anchor">
+<a href="https://learn.adafruit.com/adafruit-scd30?view=all#automatic-self-calibration-3084006" class="anchor-link"><span class="fa fa-link"></span></a><span id="automatic-self-calibration-3084006" class="anchor-link-target"></span>
+</div>Automatic Self-Calibration</h2>
+<p>Hey, automatic! That sounds great! Set and forget, right? Well, not so fast. The ASC feature has some requirements which should be considered to determine if it is suitable for any given end use application. If the conditions can not be met, then the FRC mentioned above should be used.</p>
+</div>
+<div class="row-fluid text-element">
+<ol>
+<li>The SCD-30 should regularly be exposed to fresh air with CO2 concentration of 400 ppm.</li>
+<li>The SCD-30 needs to operate in continuous mode, i.e. do not power it down.</li>
+<li>The ASC needs 7 good readings separated by at least 18 hours (that's ~5 days).</li>
+</ol>
+</div>
+<div class="row-fluid text-element">
+<p>See the PDF linked above for many more details. If you want to use ASC, enabling it is very simple. In <strong>CircuitPython</strong> use:</p>
+</div>
+<div class="code-element" aria-label="Code element">
+<div class="download-code
+    ">
+<a data-turbo="false" class="download-button" href="https://learn.adafruit.com/pages/21663/elements/3084011/download">
+<i class="fa fa-cloud"></i> Download File
+</a> <div class="code-copy-container">
+<a href="https://learn.adafruit.com/adafruit-scd30?view=all#" class="code-copy-button"><i class="fa fa-clipboard"></i> Copy Code</a>
+</div>
+</div>
+<pre class="code-text-only" style="display: none;">scd30.self_calibration_enabled = True</pre>
+<pre class="prettyprint language-python hljs">scd30.self_calibration_enabled = <span class="hljs-literal">True</span></pre>
+</div>
+<div class="row-fluid text-element">
+<p>or with the <strong>Arduino</strong> library use:</p>
+</div>
+<div class="code-element" aria-label="Code element">
+<div class="download-code
+    ">
+<a data-turbo="false" class="download-button" href="https://learn.adafruit.com/pages/21663/elements/3084013/download">
+<i class="fa fa-cloud"></i> Download File
+</a> <div class="code-copy-container">
+<a href="https://learn.adafruit.com/adafruit-scd30?view=all#" class="code-copy-button"><i class="fa fa-clipboard"></i> Copy Code</a>
+</div>
+</div>
+<pre class="code-text-only" style="display: none;">scd30.selfCalibrationEnabled(true);</pre>
+<pre class="prettyprint language-cpp hljs">scd30.<span class="hljs-built_in">selfCalibrationEnabled</span>(<span class="hljs-literal">true</span>);</pre>
+</div>
+<div class="row-fluid text-element">
+<p>With either, simply use <code>False</code>/<code>false</code> to disable ASC.</p>
+</div>
+<div class="row-fluid text-element">
+<h2>
+<div class="anchor-anchor">
+<a href="https://learn.adafruit.com/adafruit-scd30?view=all#frc-vs-asc-3084017" class="anchor-link"><span class="fa fa-link"></span></a><span id="frc-vs-asc-3084017" class="anchor-link-target"></span>
+</div>FRC vs. ASC</h2>
+<p>Both the Forced Re-Calibration (FRC) and Automatic Self-Calibration (ASC) are ways of arriving at the same "Reference Value" which is then used in determining the CO2 ppm reading reported by the SCD-30. With the FRC approach, the Reference Value is specified. With the ASC approach, the Reference Value is determined algorithmically. Either one will overwrite the Reference Value from the other one. For example, running a FRC will immediately change to the new Reference Value. However, if ASC is enabled, then it may replace the Reference Value at a later time.</p>
+</div>
+</div>
+</div>
+<div class="page-header-wrapper">
+<h2 class="headline" aria-label="Page title">
+<span id="downloads">Downloads</span>
+</h2>
+<div class="badges">
+</div>
+</div>
+<div class="page-content">
+<div class="" role="region" aria-label="Page content">
+<div class="row-fluid text-element">
+<h2>
+<div class="anchor-anchor">
+<a href="https://learn.adafruit.com/adafruit-scd30?view=all#files-3081001" class="anchor-link"><span class="fa fa-link"></span></a><span id="files-3081001" class="anchor-link-target"></span>
+</div>Files:</h2>
+<ul>
+<li><a href="https://sensirion.com/media/documents/4EAF6AF8/61652C3C/Sensirion_CO2_Sensors_SCD30_Datasheet.pdf">SCD-30 Datasheet</a></li>
+<li><a href="https://sensirion.com/media/documents/84D49268/616536CB/Sensirion_CO2_Sensors_SCD30_Design-In_Guidelines_D1.pdf">SCD-30 Design-in Guidelines</a></li>
+<li><a href="https://sensirion.com/media/documents/D7CEEF4A/6165372F/Sensirion_CO2_Sensors_SCD30_Interface_Description.pdf">SCD-30 Interface Description</a></li>
+<li><a href="https://github.com/adafruit/Fritzing-Library/blob/master/parts/Adafruit%20SCD30.fzpz">Fritzing object in the Adafruit Fritzing Library</a></li>
+<li><a href="https://github.com/adafruit/Adafruit-SCD-30-PCB">EagleCAD PCB files on GitHub</a></li>
+<li><a href="https://github.com/adafruit/Adafruit_CAD_Parts/tree/master/4867%20SCD-30%20C02%20Sensor">3D models on GitHub</a></li>
+</ul>
+</div>
+<div class="row-fluid text-element">
+<h1>
+<div class="anchor-anchor">
+<a href="https://learn.adafruit.com/adafruit-scd30?view=all#schematic-3081010" class="anchor-link"><span class="fa fa-link"></span></a><span id="schematic-3081010" class="anchor-link-target"></span>
+</div>Schematic</h1>
+</div>
+<div class="row-fluid image-element" aria-label="Image: adafruit_products_SCD30_sch.png">
+<a href="https://learn.adafruit.com/assets/98472">
+<img class="98472-asset img-responsive" srcset="https://cdn-learn.adafruit.com/assets/assets/000/098/472/medium260/adafruit_products_SCD30_sch.png?1609874872 260w,
+               https://cdn-learn.adafruit.com/assets/assets/000/098/472/medium640/adafruit_products_SCD30_sch.png?1609874872 640w,
+               https://cdn-learn.adafruit.com/assets/assets/000/098/472/medium800/adafruit_products_SCD30_sch.png?1609874872 800w,
+               https://cdn-learn.adafruit.com/assets/assets/000/098/472/large1024/adafruit_products_SCD30_sch.png?1609874872 1024w" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 65vw, (max-width: 1365px) 47vw, 750px" src="./Overview _ Adafruit SCD-30 - NDIR CO2 Temperature and Humidity Sensor _ Adafruit Learning System_files/adafruit_products_SCD30_sch.png" alt="adafruit_products_SCD30_sch.png">
+<span class="image-expand"><i class="fa fa-search-plus"></i></span>
+</a> </div>
+<div class="row-fluid text-element">
+<h1>
+<div class="anchor-anchor">
+<a href="https://learn.adafruit.com/adafruit-scd30?view=all#fab-print-3081011" class="anchor-link"><span class="fa fa-link"></span></a><span id="fab-print-3081011" class="anchor-link-target"></span>
+</div>Fab Print</h1>
+</div>
+<div class="row-fluid image-element" aria-label="Image: adafruit_products_SCD30_fab_print.png">
+<a href="https://learn.adafruit.com/assets/98473">
+<img class="98473-asset img-responsive" srcset="https://cdn-learn.adafruit.com/assets/assets/000/098/473/medium260/adafruit_products_SCD30_fab_print.png?1609874881 260w,
+               https://cdn-learn.adafruit.com/assets/assets/000/098/473/medium640/adafruit_products_SCD30_fab_print.png?1609874881 640w,
+               https://cdn-learn.adafruit.com/assets/assets/000/098/473/medium800/adafruit_products_SCD30_fab_print.png?1609874881 800w,
+               https://cdn-learn.adafruit.com/assets/assets/000/098/473/large1024/adafruit_products_SCD30_fab_print.png?1609874881 1024w" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 65vw, (max-width: 1365px) 47vw, 750px" src="./Overview _ Adafruit SCD-30 - NDIR CO2 Temperature and Humidity Sensor _ Adafruit Learning System_files/adafruit_products_SCD30_fab_print.png" alt="adafruit_products_SCD30_fab_print.png">
+<span class="image-expand"><i class="fa fa-search-plus"></i></span>
+</a> </div>
+</div>
+</div>
+<div class="page-last-updated">
+<p>
+This guide was first published on Jan 06, 2021. It was last
+updated on 2022-07-28 15:32:42 -0400.
+</p>
+</div>
+</section>
+<aside class="sidebar-right-wrapper">
+<div class="sidebar-right-content">
+<section class="guide-metadata" aria-label="Guide metadata">
+<div class="metadata-group" aria-label="Skill level">
+<i class="fa fa-ellipsis-h" title="Skill Level"></i>
+<div>Difficulty: Beginner</div>
+</div>
+<div class="metadata-group" aria-label="Guide type">
+<i class="fa fa-bars" title="Guide type"></i>
+<div>Guide Type: Product</div>
+</div>
+<div class="metadata-group" aria-label="Guide contributors">
+<i class="fa fa-user" alt="contributors" title="contributors"></i>
+<div>Contributors: <a href="https://learn.adafruit.com/u/kattni">Kattni Rembor</a>, <a href="https://learn.adafruit.com/u/eherrada">Eva Herrada</a>, <a href="https://learn.adafruit.com/u/caternuson">Carter Nelson</a></div>
+</div>
+<div class="metadata-group" aria-label="Guide categories">
+<i class="fa fa-sitemap" title="Categories"></i>
+<div>Categories: <a href="https://learn.adafruit.com/category/adafruit-products">Adafruit Products</a><br><a href="https://learn.adafruit.com/category/sensors">Sensors</a><span class="category-link-spacer">/</span><a href="https://learn.adafruit.com/category/temperature">Temperature &amp; Humidity</a><br><a href="https://learn.adafruit.com/category/breakout-boards">Breakout Boards</a></div>
+</div>
+<div class="metadata-group" aria-label="Guide favorites count">
+<i class="fa fa-bookmark" title="Favorites count"></i>
+<div>34 Saves</div>
+</div>
+</section>
+<section class="featured-products" role="region" aria-label="Featured products for Guide">
+<div class="data-header">
+Featured Products
+<span class="view-all">
+</span>
+</div>
+<div class="products">
+<div class="product-wrapper">
+<div class="product-image">
+<video class="img img-responsive product-asset" preload="auto" muted="muted" loop="loop" autoplay="autoplay" playsinline="" poster="https://cdn-shop.adafruit.com/product-videos/640x480/4867-05.jpg" data-error="/assets/missing%2Fmissing.png" aria-hidden="true">
+<source src="https://cdn-shop.adafruit.com/product-videos/640x480/4867-05.mp4">
+<source src="https://cdn-shop.adafruit.com/product-videos/640x480/4867-05.webm" type="video/webm; codecs=vp8,vorbis">
+<source src="https://cdn-shop.adafruit.com/product-videos/640x480/4867-05.ogv" type="video/ogg; codecs=theora,vorbis">
+Your browser does not support the video tag.
+</video>
+<img class="img-responsive product-asset" src="./Overview _ Adafruit SCD-30 - NDIR CO2 Temperature and Humidity Sensor _ Adafruit Learning System_files/4867-05.jpg" alt="Video of someone blowing a dust on a Adafruit SCD-30 - NDIR CO2 Temperature and Humidity Sensor. " data-error="/assets/missing%2Fmissing.png">
+</div>
+<div class="product-details">
+<a href="https://www.adafruit.com/product/4867">
+<div class="product-title">Adafruit SCD-30 - NDIR CO2 Temperature and Humidity Sensor</div>
+</a> <div class="product-price">$58.95</div>
+<a id="4867-product" class="product-buy btn-primary " data-pid="4867" data-qty="1" data-name="Adafruit SCD-30 - NDIR CO2 Temperature and Humidity Sensor" target="_blank" aria-live="polite" rel="noopener noreferrer" href="https://www.adafruit.com/product/4867">Add to Cart</a>
+</div>
+</div>
+</div>
+</section>
+</div>
+</aside>
+</article>
+<div class="related-guides-wrapper">
+<section class="content-card-group-preview">
+<div class="group-preview-headline">
+<div class="title">
+Related Guides
+</div>
+</div>
+<a class="scroll-back"><i class="fa fa-angle-left"></i></a>
+<div class="content-card-group-container">
+<div class="content-card-group">
+
+<div class="guide-preview content-card">
+<div class="preview-content">
+<a aria-hidden="true" href="https://learn.adafruit.com/matrix-portal-room-co2-monitor">
+<div class="image-container">
+<video class="video-preview lazy" preload="auto" muted="muted" loop="loop" autoplay="autoplay" playsinline="" data-error="/assets/missing%2Fmissing.png" 'aria-hidden'="true">
+<source src="https://cdn-learn.adafruit.com/guides/cropped_images/000/003/246/medium640mp4/banner.mp4?1612289939">
+<source src="https://cdn-learn.adafruit.com/guides/cropped_images/000/003/246/medium640webm/banner.webm?1612289939" type="video/webm; codecs=vp8,vorbis">
+Your browser does not support the video tag. This links to the guide RGB Matrix Portal Room CO2 Monitor.
+</video>
+<img data-src="https://cdn-learn.adafruit.com/guides/cropped_images/000/003/246/medium640thumb/banner.gif?1612289939" aria-hidden="true" alt="RGB Matrix Portal Room CO2 Monitor" class="image-preview lazy" src="data:,">
+</div>
+</a>
+<div class="bottom-section">
+<div class="info">
+<a class="title" aria-label="Guide title" href="https://learn.adafruit.com/matrix-portal-room-co2-monitor">RGB Matrix Portal Room CO2 Monitor</a>
+<div class="author">
+By
+<a aria-label="Guide author" data-turbo="false" href="https://learn.adafruit.com/u/caternuson">
+<span class="name">Carter Nelson</span>
+</a> </div>
+</div>
+<div class="badges">
+<div class="badge favorites " title="Saves">
+58
+</div>
+<div class="badge skill-level-icons" title="Beginner">
+Beginner
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="guide-preview content-card">
+<div class="preview-content">
+<a aria-hidden="true" href="https://learn.adafruit.com/ttl-serial-camera">
+<div class="image-container">
+<img aria-hidden="true" alt="TTL Serial Camera" class="image-preview lazy" src="./Overview _ Adafruit SCD-30 - NDIR CO2 Temperature and Humidity Sensor _ Adafruit Learning System_files/397.jpg" style="">
+</div>
+</a>
+<div class="bottom-section">
+<div class="info">
+<a class="title" aria-label="Guide title" href="https://learn.adafruit.com/ttl-serial-camera">TTL Serial Camera</a>
+<div class="author">
+By
+<a aria-label="Guide author" data-turbo="false" href="https://learn.adafruit.com/u/adafruit2">
+<span class="name">lady ada</span>
+</a> </div>
+</div>
+<div class="badges">
+<div class="badge favorites " title="Saves">
+118
+</div>
+<div class="badge skill-level-icons" title="Beginner">
+Beginner
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="guide-preview content-card">
+<div class="preview-content">
+<a aria-hidden="true" href="https://learn.adafruit.com/el-wire">
+<div class="image-container">
+<img aria-hidden="true" alt="a roll of EL wire (turquoise)" class="image-preview lazy" src="./Overview _ Adafruit SCD-30 - NDIR CO2 Temperature and Humidity Sensor _ Adafruit Learning System_files/EL_Wire.jpg" style="">
+</div>
+</a>
+<div class="bottom-section">
+<div class="info">
+<a class="title" aria-label="Guide title" href="https://learn.adafruit.com/el-wire">EL Wire</a>
+<div class="author">
+By
+<a aria-label="Guide author" data-turbo="false" href="https://learn.adafruit.com/u/adafruit2">
+<span class="name">lady ada</span>
+</a> </div>
+</div>
+<div class="badges">
+<div class="badge favorites " title="Saves">
+114
+</div>
+<div class="badge skill-level-icons" title="Beginner">
+Beginner
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="guide-preview content-card">
+<div class="preview-content">
+<a aria-hidden="true" href="https://learn.adafruit.com/hacking-the-kinect">
+<div class="image-container">
+<img aria-hidden="true" alt="Kinect Device" class="image-preview lazy" src="./Overview _ Adafruit SCD-30 - NDIR CO2 Temperature and Humidity Sensor _ Adafruit Learning System_files/04a1fe47-8b58-41e9-a486-65456d2bf6ce_1.7d6bbbf694215ef00e24e2f11adddb89.jpeg" style="">
+</div>
+</a>
+<div class="bottom-section">
+<div class="info">
+<a class="title" aria-label="Guide title" href="https://learn.adafruit.com/hacking-the-kinect">Hacking the Kinect</a>
+<div class="author">
+By
+<a aria-label="Guide author" data-turbo="false" href="https://learn.adafruit.com/u/adafruit2">
+<span class="name">lady ada</span>
+</a> </div>
+</div>
+<div class="badges">
+<div class="badge favorites " title="Saves">
+115
+</div>
+<div class="badge skill-level-icons" title="Intermediate">
+Intermediate
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="guide-preview content-card">
+<div class="preview-content">
+<a aria-hidden="true" href="https://learn.adafruit.com/beaglebone">
+<div class="image-container">
+<img aria-hidden="true" alt="BeagleBone Board" class="image-preview lazy" src="./Overview _ Adafruit SCD-30 - NDIR CO2 Temperature and Humidity Sensor _ Adafruit Learning System_files/beaglebonetop_LRG.jpg" style="">
+</div>
+</a>
+<div class="bottom-section">
+<div class="info">
+<a class="title" aria-label="Guide title" href="https://learn.adafruit.com/beaglebone">BeagleBone</a>
+<div class="author">
+By
+<a aria-label="Guide author" data-turbo="false" href="https://learn.adafruit.com/u/adafruit2">
+<span class="name">lady ada</span>
+</a> </div>
+</div>
+<div class="badges">
+<div class="badge favorites " title="Saves">
+18
+</div>
+<div class="badge skill-level-icons" title="Beginner">
+Beginner
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="guide-preview content-card">
+<div class="preview-content">
+<a aria-hidden="true" href="https://learn.adafruit.com/adafruit-led-backpack">
+<div class="image-container">
+<img aria-hidden="true" alt="" class="image-preview lazy" src="./Overview _ Adafruit SCD-30 - NDIR CO2 Temperature and Humidity Sensor _ Adafruit Learning System_files/green88smile_t.jpg" style="">
+</div>
+</a>
+<div class="bottom-section">
+<div class="info">
+<a class="title" aria-label="Guide title" href="https://learn.adafruit.com/adafruit-led-backpack">Adafruit LED Backpacks</a>
+<div class="author">
+By
+<a aria-label="Guide author" data-turbo="false" href="https://learn.adafruit.com/u/MakerMelissa">
+<span class="name">M. LeBlanc-Williams</span>
+</a> </div>
+</div>
+<div class="badges">
+<div class="badge favorites " title="Saves">
+167
+</div>
+<div class="badge skill-level-icons" title="Intermediate">
+Intermediate
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="guide-preview content-card">
+<div class="preview-content">
+<a aria-hidden="true" href="https://learn.adafruit.com/smt-manufacturing">
+<div class="image-container">
+<img aria-hidden="true" alt="six printed circuit boards" class="image-preview lazy" src="./Overview _ Adafruit SCD-30 - NDIR CO2 Temperature and Humidity Sensor _ Adafruit Learning System_files/manufacturing_fixtured.jpg" style="">
+</div>
+</a>
+<div class="bottom-section">
+<div class="info">
+<a class="title" aria-label="Guide title" href="https://learn.adafruit.com/smt-manufacturing">SMT Manufacturing</a>
+<div class="author">
+By
+<a aria-label="Guide author" data-turbo="false" href="https://learn.adafruit.com/u/adafruit2">
+<span class="name">lady ada</span>
+</a> </div>
+</div>
+<div class="badges">
+<div class="badge favorites " title="Saves">
+34
+</div>
+<div class="badge skill-level-icons" title="Intermediate">
+Intermediate
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="guide-preview content-card">
+<div class="preview-content">
+<a aria-hidden="true" href="https://learn.adafruit.com/adafruit-ina219-current-sensor-breakout">
+<div class="image-container">
+<img aria-hidden="true" alt="An Adafruit INA219 current sensor breakout board" class="image-preview lazy" src="./Overview _ Adafruit SCD-30 - NDIR CO2 Temperature and Humidity Sensor _ Adafruit Learning System_files/INA219_top_angle.jpg" style="">
+</div>
+</a>
+<div class="bottom-section">
+<div class="info">
+<a class="title" aria-label="Guide title" href="https://learn.adafruit.com/adafruit-ina219-current-sensor-breakout">Adafruit INA219 Current Sensor Breakout</a>
+<div class="author">
+By
+<a aria-label="Guide author" data-turbo="false" href="https://learn.adafruit.com/u/adafruit2">
+<span class="name">lady ada</span>
+</a> </div>
+</div>
+<div class="badges">
+<div class="badge favorites " title="Saves">
+46
+</div>
+<div class="badge skill-level-icons" title="Beginner">
+Beginner
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<a class="scroll-forward"><i class="fa fa-angle-right"></i></a>
+</section>
+</div>
+</div>
+<div class="modal fade" id="notify-modal">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<a href="https://learn.adafruit.com/adafruit-scd30?view=all#" class="close" data-dismiss="modal">×</a>
+<h5>OUT OF STOCK NOTIFICATION</h5>
+</div>
+<div class="modal-body">
+<p class="notify-modal-form-header"></p>
+<div class="notify-modal-products"></div>
+<form id="notify-modal-form" name="back_in_stock_notification">
+<p class="notify-modal-form-notice"></p>
+<div class="notify-modal-break"></div>
+<div class="form-group">
+<label class="inputLabel" for="name">YOUR NAME</label>
+<input type="text" size="25" maxlength="64" name="name" value="">
+</div>
+<div class="form-group">
+<label class="inputLabel" for="email">YOUR EMAIL</label>
+<input type="email" size="25" maxlength="96" name="email" value="">
+</div>
+<input type="hidden" name="notify_me" value="true">
+</form>
+<div id="notify-modal-success" style="display:none">
+<p>You have been successfully subscribed to the Notification List for this product and will therefore receive an e-mail from us when it is back in stock!</p>
+<p>For security reasons, an e-mail has been sent to you acknowledging your subscription. Please remember that this subscription will not result in you receiving any e-mail from us about anything other than the restocking of this item.</p>
+<p>If, for any reason, you would like to unsubscribe from the Notification List for this product you will find details of how to do so in the e-mail that has just been sent to you!</p>
+</div>
+</div>
+<div class="modal-footer">
+<a href="https://learn.adafruit.com/adafruit-scd30?view=all#" id="close-notify" style="display: none" data-dismiss="modal" data-target="#notify-modal">CLOSE</a>
+<a href="https://learn.adafruit.com/adafruit-scd30?view=all#" id="submit-notify" rel="nofollow" class="blue-button">NOTIFY ME</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="search-container">
+<div class="nav-bar">
+<div class="content">
+<div class="left-content">
+<div class="breadcrumbs">
+<a href="https://learn.adafruit.com/" aria-label="Home page"><i class="fa fa-home"></i></a>
+<i class="fa fa-chevron-right separator"></i> Search <i class="fa fa-chevron-right separator"></i>
+</div>
+</div>
+</div>
+</div>
+<div class="sub-header">
+<div class="header-intro">
+<h1 class="title">Search</h1>
+</div>
+<div class="header-main-content-wrapper">
+<div class="header-main-content">
+<div id="search-refinements" class="breakdown"><div class="ais-CurrentRefinements"><ul class="ais-CurrentRefinements-list"></ul></div>
+</div>
+</div>
+</div>
+</div>
+<div class="search-content">
+<div>
+<div class="facets-wrapper">
+<h5 class="search-refinement-header">Categories</h5>
+<div id="search-categories"><div class="ais-HierarchicalMenu root ais-HierarchicalMenu--noRefinement"></div></div>
+</div>
+</div>
+<div>
+<div id="search-results"><div class="no-results">No results for query</div></div>
+<div id="search-pagination" class="pagination"><div class="ais-Pagination ais-Pagination--noRefinement"><ul class="ais-Pagination-list"><li class="ais-Pagination-item item ais-Pagination-item--firstPage ais-Pagination-item--disabled disabled"><span class="ais-Pagination-link link">«</span></li><li class="ais-Pagination-item item ais-Pagination-item--previousPage ais-Pagination-item--disabled disabled"><span class="ais-Pagination-link link">‹</span></li><li class="ais-Pagination-item item ais-Pagination-item--page ais-Pagination-item--selected selected"><a class="ais-Pagination-link link" aria-label="1" href="https://learn.adafruit.com/adafruit-scd30?view=all">1</a></li><li class="ais-Pagination-item item ais-Pagination-item--nextPage ais-Pagination-item--disabled disabled"><span class="ais-Pagination-link link">›</span></li><li class="ais-Pagination-item item ais-Pagination-item--lastPage ais-Pagination-item--disabled disabled"><span class="ais-Pagination-link link">»</span></li></ul></div></div>
+</div>
+</div>
+</div>
+<div id="remote-modal"></div>
+<div id="main-content-overlay"></div>
+</main>
+<footer id="adafruit-footer">
+<div class="footer-container">
+<div class="application-support-link">
+<div>
+<ul>
+<li>
+<a href="https://www.adafruit.com/contact_us">Contact Us</a>
+</li>
+<li>
+<a href="https://forums.adafruit.com/">Tech Support Forums</a>
+</li>
+<li>
+<a href="https://www.adafruit.com/faq">FAQs</a>
+</li>
+<li>
+<a href="https://www.adafruit.com/shippinginfo">Shipping &amp; Returns</a>
+</li>
+<li>
+<a href="https://www.adafruit.com/terms_of_service">Terms of Service</a>
+</li>
+<li>
+<a href="https://www.adafruit.com/privacy">Privacy &amp; Legal</a>
+</li>
+<li>
+<a href="https://www.adafruit.com/accessibility">Website Accessibility</a>
+</li>
+</ul>
+</div>
+<div>
+<ul>
+<li>
+<a href="https://www.adafruit.com/about">About Us</a>
+</li>
+<li>
+<a href="https://www.adafruit.com/press">Press</a>
+</li>
+<li>
+<a href="https://www.adafruit.com/educators">Educators</a>
+</li>
+<li>
+<a href="https://www.adafruit.com/distributors">Distributors</a>
+</li>
+<li>
+<a href="https://jobs.adafruit.com/">Jobs</a>
+</li>
+<li>
+<a href="https://www.adafruit.com/category/14">Gift Cards</a>
+</li>
+</ul>
+</div>
+</div>
+<aside>
+<div class="quote">"Let the beauty of what you love be what you do"</div>
+<div class="quote-attribution"><a href="http://en.wikipedia.org/wiki/Rumi">Rumi</a></div>
+</aside>
+</div>
+<div class="footer-container bottom">
+<a title="About Adafruit" id="footer-logo" href="https://learn.adafruit.com/">
+<img alt="Happy Halloween!" src="./Overview _ Adafruit SCD-30 - NDIR CO2 Temperature and Humidity Sensor _ Adafruit Learning System_files/adafruit_logo_small(1).png">
+</a>
+<div class="social-links">
+<a href="https://www.instagram.com/adafruit/" target="_blank" rel="noopener noreferrer" aria-label="Adafruit on Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+<a href="https://twitter.com/adafruit/" target="_blank" rel="noopener noreferrer" aria-label="Adafruit on Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+<a href="https://www.facebook.com/adafruitindustries" target="_blank" rel="noopener noreferrer" aria-label="Adafruit on Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+<a href="https://www.youtube.com/adafruit" target="_blank" rel="noopener noreferrer" aria-label="Adafruit on YouTube"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+<a href="https://github.com/adafruit" target="_blank" rel="noopener noreferrer" aria-label="Adafruit on Github"><i class="fa fa-github" aria-hidden="true"></i></a>
+<a class="tiktok-logo" aria-label="Adafruit on TikTok" href="https://www.tiktok.com/@adafruit" target="_blank" rel="noopener noreferrer"><svg viewBox="3 2 20 22" xmlns="http://www.w3.org/2000/svg"><path class="logo" d="M19.8059 7.50695C18.7771 7.50695 17.8278 7.16612 17.0655 6.59113C16.1912 5.93198 15.5631 4.9651 15.3412 3.85069C15.2863 3.57534 15.2567 3.29119 15.2539 3H12.3149V11.0308L12.3114 15.4297C12.3114 16.6057 11.5455 17.6029 10.4839 17.9536C10.1758 18.0553 9.8431 18.1036 9.49663 18.0846C9.05438 18.0603 8.63995 17.9268 8.27975 17.7113C7.51322 17.2529 6.99351 16.4212 6.97942 15.4698C6.95724 13.9829 8.15933 12.7706 9.64522 12.7706C9.93852 12.7706 10.2202 12.8185 10.4839 12.9054V10.7104V9.92134C10.2058 9.88015 9.92268 9.85867 9.63641 9.85867C8.01004 9.85867 6.48894 10.5347 5.40164 11.7526C4.57982 12.6731 4.08687 13.8473 4.01082 15.0786C3.91117 16.6962 4.50306 18.2339 5.65093 19.3683C5.81959 19.5349 5.9967 19.6895 6.1819 19.8321C7.16604 20.5894 8.36919 21 9.63641 21C9.92268 21 10.2058 20.9789 10.4839 20.9377C11.6677 20.7623 12.7599 20.2204 13.6219 19.3683C14.681 18.3215 15.2662 16.9318 15.2726 15.4526L15.2574 8.88369C15.7627 9.27347 16.3152 9.596 16.9081 9.84635C17.8303 10.2354 18.8081 10.4326 19.8144 10.4322V8.29814V7.50625C19.8151 7.50695 19.8066 7.50695 19.8059 7.50695Z" fill="currentColor"></path></svg></a>
+</div>
+<div class="footer-messaging">
+<a href="https://www.adafruit.com/about">A Minority and Woman-owned Business Enterprise (M/WBE)</a>
+</div>
+</div>
+</footer>
+</div>
+</div>
+
+
+<span style="margin: 0px auto; border: 2px dotted rgb(0, 0, 0); position: absolute; z-index: 2147483647; visibility: hidden; left: 957px; width: 0px; top: 10309px; height: 0px;"></span><span style="z-index: 2147483647; position: absolute; visibility: hidden; left: 942px; width: 50px; top: 10294px; height: 20px; font-size: 10px; color: black;">0</span></body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
